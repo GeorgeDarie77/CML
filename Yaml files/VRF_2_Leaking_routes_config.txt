@@ -1,0 +1,33 @@
+Changes shall be done in the VRF_2.yaml
+
+In this topology there are 2 VRFs defined in SPR1
+The client 1 C1xx is assigned to VRF1
+The client 2 C2xx is assigned to VRF2
+
+There is no way that C1xx to communicate with C2xx
+
+ROUTE LEAKING - with static routes will break the VRF separation
+
+The following settings will allow communication between C1R1 and C2R2
+Similar configuration can be done for other combination (C1R1-C2R1, C1R2-C2R1, C1R2-C2R2)
+
+Steps
+
+1. Add static routes to the SPR1 on both clients C1R1 and C2R2
+
+C1R1(config)#ip route 10.2.2.0 255.255.255.0 192.168.1.1
+
+C2R2(config)#ip route 10.1.1.0 255.255.255.0 192.168.3.1
+
+2. Configure static routes in each VRF instance
+
+SPR1(config) ip route vrf VRF1 10.2.2.0 255.255.255.0 192.168.3.2 global
+SPR1(config) ip route vrf VRF2 10.1.1.0 255.255.255.0 192.168.1.2 global
+
+The global keyword tells the router to resolve the next hop using the global routing table
+But... thee is nothing in the global routing table
+
+3. Configure static routes in the global routing table
+
+SPR1(config)#ip route 192.168.3.2 255.255.255.255 G0/3
+SPR1(config)#ip route 192.168.1.2 255.255.255.255 G0/0

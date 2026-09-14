@@ -1,0 +1,1270 @@
+annotations:
+  - border_color: '#808080FF'
+    border_style: ''
+    color: '#F4CA88'
+    rotation: 0
+    thickness: 1
+    type: ellipse
+    x1: -568.593975046206
+    y1: 74.41752162109074
+    x2: 173.94621165118468
+    y2: 158.95084857780682
+    z_index: 0
+  - border_color: '#808080FF'
+    border_style: ''
+    color: '#6A9ED9'
+    rotation: 0
+    thickness: 1
+    type: ellipse
+    x1: -230.19861502364188
+    y1: 79.91582141466263
+    x2: 161.45007575670314
+    y2: 150.45347616955928
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: OSPF Area 0
+    text_font: cursive
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -637.572645183744
+    y1: -43.5460012228163
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: EIGRP AS 1
+    text_font: cursive
+    text_italic: false
+    text_size: 15
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -279.6709480281305
+    y1: -34.53641824113083
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: 10.1.1.0/30
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -599.5720269268612
+    y1: 40.44039712575915
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -684.5333858716779
+    y1: 84.43916061199326
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -673.5244211468754
+    y1: 37.46605478640089
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.2'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -434.58593770672735
+    y1: 29.4808929515913
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.10.0/24
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -567.5695538993295
+    y1: 128.42555896056876
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: 20.1.1.0/30
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -311.6363256426862
+    y1: 33.46729130016678
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.2'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -174.65394596385
+    y1: 41.48954854795235
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -184.63848954177672
+    y1: 73.49202157548407
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -368.56924477088825
+    y1: 36.51582446547698
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#020000'
+    rotation: 0
+    text_bold: true
+    text_content: 192.168.1.0/24
+    text_font: cursive
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 10
+    type: text
+    x1: -360.0
+    y1: 105.0
+    z_index: 2
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3178 bytes
+          !
+          ! Last configuration change at 12:40:54 UTC Sun Apr 5 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 1.1.1.1 255.255.255.0
+           ip ospf 110 area 0
+          !
+          interface GigabitEthernet0/0
+           ip address 10.1.1.1 255.255.255.252
+           ip ospf 110 area 0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.10.1 255.255.255.0
+           ip ospf 110 area 0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospf 110
+           router-id 1.1.1.1
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -699
+    y: 58
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3344 bytes
+          !
+          ! Last configuration change at 12:40:19 UTC Sun Apr 5 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 2.2.2.2 255.255.255.0
+          !
+          interface GigabitEthernet0/0
+           ip address 10.1.1.2 255.255.255.252
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 20.1.1.1 255.255.255.252
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp 1
+           default-metric 1000000 1 255 1 1500
+           network 20.1.1.0 0.0.0.3
+           redistribute ospf 110
+           eigrp router-id 2.2.2.2
+          !
+          router ospf 110
+           router-id 2.2.2.2
+           redistribute eigrp 1 subnets
+           network 2.2.2.0 0.0.0.255 area 0
+           network 10.1.1.0 0.0.0.3 area 0
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -392
+    y: 61
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3199 bytes
+          !
+          ! Last configuration change at 12:41:06 UTC Sun Apr 5 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           ip address 3.3.3.3 255.255.255.255
+          !
+          interface GigabitEthernet0/0
+           ip address 20.1.1.2 255.255.255.252
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 192.168.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp 1
+           network 3.3.3.3 0.0.0.0
+           network 20.1.1.0 0.0.0.3
+           network 192.168.1.0
+           eigrp router-id 3.3.3.3
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -137
+    y: 60
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname SW1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -539
+    y: 172
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname SW2
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -291
+    y: 173
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n0
+    n2: n1
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/0<->R2-GigabitEthernet0/0
+  - id: l1
+    n1: n0
+    n2: n3
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/1<->SW1-GigabitEthernet0/0
+  - id: l2
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: R2-GigabitEthernet0/1<->R3-GigabitEthernet0/0
+  - id: l3
+    n1: n2
+    n2: n4
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: R3-GigabitEthernet0/1<->SW2-GigabitEthernet0/0
+lab:
+  description: Redistribute routes between OSPF and EIGRP
+  notes: |-
+    # Mutual redistribution
+    <strong>Mutual</strong> means that *redistribution* is done in both directions.
+    <strong style="color: blue">R<sub>2</sub></strong> will do the mutual redistribution because it has one interface in **OSPF** and another into **EIGRP**.
+
+     <hr>
+
+    ### Initial IP configuration
+    <details>
+    <summary><strong style="color: red">R<sub>1</sub></strong> IP interface configuration</summary>
+    <pre>
+    R1#sh ip int brief | exclude un
+    Interface                  IP-Address      OK? Method Status                Protocol
+    GigabitEthernet0/0         10.1.1.1        YES NVRAM  up                    up
+    GigabitEthernet0/1         172.16.10.1     YES NVRAM  up                    up
+    Loopback0                  1.1.1.1         YES NVRAM  up                    up
+    </pre>
+    </details>
+
+    <details>
+    <summary><strong style="color: blue">R<sub>2</sub></strong> IP interface configuration</summary>
+    <pre>
+    R1#sh ip int brief | exclude un
+    Interface                  IP-Address      OK? Method Status                Protocol
+    GigabitEthernet0/0         10.1.1.1        YES NVRAM  up                    up
+    GigabitEthernet0/1         172.16.10.1     YES NVRAM  up                    up
+    Loopback0                  1.1.1.1         YES NVRAM  up                    up
+    </pre>
+    </details>
+
+    <details>
+    <summary><strong style="color: green">R<sub>3</sub></strong> IP interface configuration</summary>
+    <pre>
+    R1#sh ip int brief | exclude un
+    Interface                  IP-Address      OK? Method Status                Protocol
+    GigabitEthernet0/0         10.1.1.1        YES NVRAM  up                    up
+    GigabitEthernet0/1         172.16.10.1     YES NVRAM  up                    up
+    Loopback0                  1.1.1.1         YES NVRAM  up                    up
+    </pre>
+    </details>
+     <hr>
+
+    ### Initial routing protocol configuration
+    <details>
+    <summary><strong style="color: red">R<sub>1</sub></strong> OSPF process</summary>
+    <pre>
+    R1#sh run | sec router
+    router ospf 110
+     router-id 1.1.1.1
+    </pre>
+    </details>
+    <details>
+    <summary><strong style="color: blue">R<sub>2</sub></strong> OSPF and EIFGRP processes </summary>
+    <pre>
+    R2#sh run | sec router
+    router eigrp 1
+     network 20.1.1.0 0.0.0.3
+     eigrp router-id 2.2.2.2
+    router ospf 110
+     router-id 2.2.2.2
+     network 2.2.2.0 0.0.0.255 area 0
+     network 10.1.1.0 0.0.0.3 area 0
+    </pre>
+    </details>
+
+    <details>
+    <summary><strong style="color: green">R<sub>3</sub></strong> EIGRP process</summary>
+    <pre>
+    R3#sh run | sec router
+    router eigrp 1
+     network 3.3.3.3 0.0.0.0
+     network 20.1.1.0 0.0.0.3
+     network 192.168.1.0
+     eigrp router-id 3.3.3.3
+    </pre>
+    </details>
+     <hr>
+
+    ### Initial routing tables
+    <details>
+    <summary><strong style="color: red">R<sub>1</sub></strong> routing table</summary>
+    <pre>
+    Gateway of last resort is not set
+
+          1.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        1.1.1.0/24 is directly connected, Loopback0
+    L        1.1.1.1/32 is directly connected, Loopback0
+          2.0.0.0/32 is subnetted, 1 subnets
+    O        2.2.2.2 [110/2] via 10.1.1.2, 00:02:02, GigabitEthernet0/0
+          10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        10.1.1.0/30 is directly connected, GigabitEthernet0/0
+    L        10.1.1.1/32 is directly connected, GigabitEthernet0/0
+          172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+    C        172.16.10.0/24 is directly connected, GigabitEthernet0/1
+    L        172.16.10.1/32 is directly connected, GigabitEthernet0/1
+
+    </pre>
+    </details>
+    <details>
+    <summary><strong style="color: blue">R<sub>2</sub></strong> routing table </summary>
+    <pre>
+    Gateway of last resort is not set
+
+          1.0.0.0/32 is subnetted, 1 subnets
+    O        1.1.1.1 [110/2] via 10.1.1.1, 00:02:20, GigabitEthernet0/0
+          2.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        2.2.2.0/24 is directly connected, Loopback0
+    L        2.2.2.2/32 is directly connected, Loopback0
+          3.0.0.0/32 is subnetted, 1 subnets
+    D        3.3.3.3 [90/130816] via 20.1.1.2, 00:02:53, GigabitEthernet0/1
+          10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        10.1.1.0/30 is directly connected, GigabitEthernet0/0
+    L        10.1.1.2/32 is directly connected, GigabitEthernet0/0
+          20.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        20.1.1.0/30 is directly connected, GigabitEthernet0/1
+    L        20.1.1.1/32 is directly connected, GigabitEthernet0/1
+          172.16.0.0/24 is subnetted, 1 subnets
+    O        172.16.10.0 [110/2] via 10.1.1.1, 00:02:20, GigabitEthernet0/0
+    D     192.168.1.0/24 [90/3072] via 20.1.1.2, 00:02:53, GigabitEthernet0/1
+    </pre>
+    </details>
+
+    <details>
+    <summary><strong style="color: green">R<sub>3</sub></strong> routing table </summary>
+    <pre>
+    R1#sh ip int brief | exclude un
+    Interface                  IP-Address      OK? Method Status                Protocol
+    GigabitEthernet0/0         10.1.1.1        YES NVRAM  up                    up
+    GigabitEthernet0/1         172.16.10.1     YES NVRAM  up                    up
+    Loopback0                  1.1.1.1         YES NVRAM  up                    up
+    </pre>
+    </details>
+     <hr>
+
+    > Note 💡:  From **R<sub>1</sub>** it is not yet possible to ping `192.168.1.1` on **R<sub>3</sub>** because **R<sub>1</sub>** has no routes to **R<sub>3</sub>**
+    > <details>
+    > <summary>From <strong style="color: red">R<sub>1</sub></strong> ping 192.168.1.1  on <strong style="color: green">R<sub>3</sub></strong></summary>
+    > <pre>
+    R1#ping 192.168.1.1
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 192.168.1.1, timeout is 2 seconds:
+    .....
+    Success rate is 0 percent (0/5)
+    > </pre>
+    > </details>
+    >
+    > Same for **R<sub>3</sub>**. It is not yet possible to ping `172.16.10.1` on **R<sub>1</sub>** because **R<sub>3</sub>** has no routes to **R<sub>1</sub>**
+    > <details>
+    > <summary>From <strong style="color: green">R<sub>3</sub></strong> ping 172.16.10.1 on <strong style="color: red">R<sub>1</sub></strong></summary>
+    > <pre>
+    R3#ping 172.16.10.1
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 172.16.10.1, timeout is 2 seconds:
+    .....
+    Success rate is 0 percent (0/5)
+    > </pre>
+    > </details>
+    <hr>
+
+    ### Configure redistribution of OSPF routes into EIGRP
+    <details>
+    <summary>Redistribute OSPF into EIGRP on <strong style="color: blue">R<sub>2</sub></strong></summary>
+    <pre>
+    R2#conf t
+    R2(config)#router eigrp 1
+    R2(config-router)#redistribute ospf 110
+    .
+    R2#sh run | sec eigrp
+    router eigrp 1
+     network 20.1.1.0 0.0.0.3
+     <strong style="color: magenta">redistribute ospf 110</strong>
+     eigrp router-id 2.2.2.2
+    </pre>
+    </details>
+
+    <strong style="color: red">BUT NO ROUTES ON</strong> <strong style="color: green">R<sub>3</sub></strong> <strong style="color: red">!!! </strong>
+    <details>
+    <summary>Topology table on <strong style="color: green">R<sub>3</sub></strong></summary>
+    <pre>
+    R3#sh ip eigrp topo
+    P 20.1.1.0/30, 1 successors, FD is 2816
+            via Connected, GigabitEthernet0/0
+    P 192.168.1.0/24, 1 successors, FD is 2816
+            via Connected, GigabitEthernet0/1
+    P 3.3.3.3/32, 1 successors, FD is 128256
+            via Connected, Loopback0
+    </pre>
+    </details>
+    <strong style="color: firebrick">WHY?</strong>
+
+    <strong style="color: darkorchid">**Because default seed metric is set to infinity an EIGRP will not install the routes!!!**</strong>
+
+    <strong style="color: firebrick">How to solve it?</strong>
+
+    <strong style="color: deepskyblue">**Set default metric before redistribution**</strong>
+    <details>
+    <summary>Set default metric for EIGRP process on <strong style="color: blue">R<sub>2</sub></strong></summary>
+    <pre>
+    R2#conf t
+    R2(config)#router eigrp 1
+    R2(config-router)#default-metric 1000000 1 255 1 1500
+    </pre>
+    </details>
+
+    <details>
+    <summary>Check the results on <strong style="color: green">R<sub>3</sub></strong></summary>
+    External routes are install in the routing table. Check for code D EX and AD = 170.
+    EIGRP topology will show the external routes as Passive routes.
+    <pre>
+    R3#sh ip route
+          1.0.0.0/32 is subnetted, 1 subnets
+    <strong style="color: magenta">D EX     1.1.1.1 [170/3072] via 20.1.1.1, 00:01:50, GigabitEthernet0/0
+          2.0.0.0/24 is subnetted, 1 subnets
+    D EX     2.2.2.0 [170/3072] via 20.1.1.1, 00:01:50, GigabitEthernet0/0</strong>
+          3.0.0.0/32 is subnetted, 1 subnets
+    C        3.3.3.3 is directly connected, Loopback0
+          10.0.0.0/30 is subnetted, 1 subnets
+    <strong style="color: magenta">D EX     10.1.1.0 [170/3072] via 20.1.1.1, 00:01:50, GigabitEthernet0/0 </strong>
+          20.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        20.1.1.0/30 is directly connected, GigabitEthernet0/0
+    L        20.1.1.2/32 is directly connected, GigabitEthernet0/0
+          172.16.0.0/24 is subnetted, 1 subnets
+    <strong style="color: magenta"> D EX     172.16.10.0 [170/3072] via 20.1.1.1, 00:01:50, GigabitEthernet0/0</strong>
+          192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+    C        192.168.1.0/24 is directly connected, GigabitEthernet0/1
+    L        192.168.1.1/32 is directly connected, GigabitEthernet0/1
+
+
+    R3#sh ip eigrp topo
+    P 20.1.1.0/30, 1 successors, FD is 2816
+            via Connected, GigabitEthernet0/0
+    <strong style="color: magenta">P 172.16.10.0/24, 1 successors, FD is 3072
+            via 20.1.1.1 (3072/2816), GigabitEthernet0/0</strong>
+    <strong style="color: magenta"> P 2.2.2.0/24, 1 successors, FD is 3072
+            via 20.1.1.1 (3072/2816), GigabitEthernet0/0</strong>
+    P 192.168.1.0/24, 1 successors, FD is 2816
+            via Connected, GigabitEthernet0/1
+    P 3.3.3.3/32, 1 successors, FD is 128256
+            via Connected, Loopback0
+    <strong style="color: magenta">P 10.1.1.0/30, 1 successors, FD is 3072
+            via 20.1.1.1 (3072/2816), GigabitEthernet0/0
+    P 1.1.1.1/32, 1 successors, FD is 3072
+            via 20.1.1.1 (3072/2816), GigabitEthernet0/0</strong>
+    </pre>
+    </details>
+    <hr>
+
+    ### Configure redistribution of EIGRP routes into OSPF
+    <details>
+    <summary>Redistribute OSPF into EIGRP on <strong style="color: blue">R<sub>2</sub></strong></summary>
+    <pre>
+    R2#conf t
+    R2(config)#router ospf 110
+    R2(config-router)#redistribute eigrp 1 subnets
+    </pre>
+    </details>
+
+    <strong style="color: darkorchid">**Default seed metric is set to 20 when redistribute EIGRP routes into OSPF!!!**</strong>
+    <strong style="color: firebrick">Pay attention to the key *subnets* in the redistribution command!</strong>
+    <details>
+    <summary>Check the results on <strong style="color: red">R<sub>1</sub></strong></summary>
+    External routes are install in the routing table. Check for code O EX2 and AD = 20.
+
+    OSPF database will show Type 5 LSA which indicates redistribute routes.
+    <pre>
+    R1#sh ip route
+          1.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        1.1.1.0/24 is directly connected, Loopback0
+    L        1.1.1.1/32 is directly connected, Loopback0
+          2.0.0.0/32 is subnetted, 1 subnets
+    O        2.2.2.2 [110/2] via 10.1.1.2, 01:12:35, GigabitEthernet0/0
+          3.0.0.0/32 is subnetted, 1 subnets
+    <strong style="color: magenta">O E2     3.3.3.3 [110/20] via 10.1.1.2, 00:01:35, GigabitEthernet0/0</strong>
+          10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C        10.1.1.0/30 is directly connected, GigabitEthernet0/0
+    L        10.1.1.1/32 is directly connected, GigabitEthernet0/0
+          20.0.0.0/30 is subnetted, 1 subnets
+    <strong style="color: magenta">O E2     20.1.1.0 [110/20] via 10.1.1.2, 00:01:35, GigabitEthernet0/0</strong>
+          172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+    C        172.16.10.0/24 is directly connected, GigabitEthernet0/1
+    L        172.16.10.1/32 is directly connected, GigabitEthernet0/1
+    <strong style="color: magenta">O E2  192.168.1.0/24 [110/20] via 10.1.1.2, 00:01:35, GigabitEthernet0/0</strong>
+
+    R1#sh ip ospf database external
+
+                OSPF Router with ID (1.1.1.1) (Process ID 110)
+
+                    Type-5 AS External Link States
+
+      LS age: 239
+      Options: (No TOS-capability, DC, Upward)
+      LS Type: AS External Link
+      Link State ID: 3.3.3.3 (External Network Number )
+      Advertising Router: 2.2.2.2
+      LS Seq Number: 80000001
+      Checksum: 0x216B
+      Length: 36
+      Network Mask: /32
+            Metric Type: 2 (Larger than any link state path)
+            MTID: 0
+            Metric: 20
+            Forward Address: 0.0.0.0
+            External Route Tag: 0
+
+      LS age: 239
+      Options: (No TOS-capability, DC, Upward)
+      LS Type: AS External Link
+      Link State ID: 20.1.1.0 (External Network Number )
+      Advertising Router: 2.2.2.2
+      LS Seq Number: 80000001
+      Checksum: 0x7D08
+      Length: 36
+      Network Mask: /30
+            Metric Type: 2 (Larger than any link state path)
+            MTID: 0
+            Metric: 20
+            Forward Address: 0.0.0.0
+            External Route Tag: 0
+
+      LS age: 239
+      Options: (No TOS-capability, DC, Upward)
+      LS Type: AS External Link
+      Link State ID: 192.168.1.0 (External Network Number )
+      Advertising Router: 2.2.2.2
+      LS Seq Number: 80000001
+      Checksum: 0xEE3F
+      Length: 36
+      Network Mask: /24
+            Metric Type: 2 (Larger than any link state path)
+            MTID: 0
+            Metric: 20
+            Forward Address: 0.0.0.0
+            External Route Tag: 0
+
+    </pre>
+    </details>
+    <hr>
+
+    > Note 💡:  From **R<sub>1</sub>** it is NOW possible to ping `192.168.1.1` on **R<sub>3</sub>** because **R<sub>1</sub>** has learned the routes to **R<sub>3</sub>**
+    > <details>
+    > <summary>From <strong style="color: red">R<sub>1</sub></strong> ping 192.168.1.1  on <strong style="color: green">R<sub>3</sub></strong></summary>
+    > <pre>
+    R1#ping 192.168.1.1
+    R1#ping 192.168.1.1
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 192.168.1.1, timeout is 2 seconds:
+    !!!!!
+    Success rate is 100 percent (5/5), round-trip min/avg/max = 4/5/7 ms
+
+    > </pre>
+    > </details>
+    >
+    > Same for **R<sub>3</sub>**. NOW it possible to ping `172.16.10.1` on **R<sub>1</sub>** because **R<sub>3</sub>** has learned the routes to **R<sub>1</sub>**
+    > <details>
+    > <summary>From <strong style="color: green">R<sub>3</sub></strong> ping 172.16.10.1 on <strong style="color: red">R<sub>1</sub></strong></summary>
+    > <pre>
+    R3#ping 172.16.10.1
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 172.16.10.1, timeout is 2 seconds:
+    !!!!!
+    Success rate is 100 percent (5/5), round-trip min/avg/max = 2/3/6 ms
+
+    > </pre>
+    > </details>
+  title: OSPF_EIGRP_Route_Redistribution
+  version: 0.3.0

@@ -1,0 +1,1448 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.1.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -513.5934736102695
+    y1: -60.5369957330399
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.1.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -558.5713419755261
+    y1: 61.44165374873691
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 192.168.1.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -488.5791531407298
+    y1: 137.43228035049262
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.0.12.0/24
+      172.16.12.0/24
+      192.168.12.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -305.6163863615335
+    y1: 67.46092128957241
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 10.0.3.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 212.25915573955592
+    y1: -51.497679534848515
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.3.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 251.25941611172948
+    y1: 72.48044920258138
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      10.0.23.0/24
+      172.16.23.0/24
+      192.168.23.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -25.67887568316229
+    y1: 77.46873245477605
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 192.168.3.0
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 218.2784232803915
+    y1: 167.4661287330415
+    z_index: 0
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4492 bytes
+          !
+          ! Last configuration change at 12:58:40 UTC Sat Mar 14 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip vrf BLUE
+          !
+          ip vrf GREEN
+          !
+          ip vrf RED
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip vrf forwarding RED
+           ip address 10.0.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           ip vrf forwarding GREEN
+           ip address 172.16.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           ip vrf forwarding BLUE
+           ip address 192.168.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3.1
+           encapsulation dot1Q 100
+           ip vrf forwarding RED
+           ip address 10.0.12.1 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3.2
+           encapsulation dot1Q 200
+           ip vrf forwarding GREEN
+           ip address 172.16.12.1 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3.3
+           encapsulation dot1Q 300
+           ip vrf forwarding BLUE
+           ip address 192.168.12.1 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          !
+          router eigrp VRFEXAMPLE
+           !
+           address-family ipv4 unicast vrf RED autonomous-system 10
+            !
+            topology base
+            exit-af-topology
+            network 10.0.1.0 0.0.0.255
+            network 10.0.12.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN autonomous-system 20
+            !
+            topology base
+            exit-af-topology
+            network 172.16.1.0 0.0.0.255
+            network 172.16.12.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE autonomous-system 30
+            !
+            topology base
+            exit-af-topology
+            network 192.168.1.0
+            network 192.168.12.0
+           exit-address-family
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast vrf RED
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -366
+    y: 48
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 5006 bytes
+          !
+          ! Last configuration change at 12:59:08 UTC Sat Mar 14 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition BLUE
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          vrf definition GREEN
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          vrf definition RED
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/0.1
+           encapsulation dot1Q 100
+           vrf forwarding RED
+           ip address 10.0.12.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/0.2
+           encapsulation dot1Q 200
+           vrf forwarding GREEN
+           ip address 172.16.12.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/0.3
+           encapsulation dot1Q 300
+           vrf forwarding BLUE
+           ip address 192.168.12.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1.1
+           encapsulation dot1Q 100
+           vrf forwarding RED
+           ip address 10.0.23.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/1.2
+           encapsulation dot1Q 200
+           vrf forwarding GREEN
+           ip address 172.16.23.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/1.3
+           encapsulation dot1Q 300
+           vrf forwarding BLUE
+           ip address 192.168.23.2 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          !
+          router eigrp VRFEXAMPLE_R2
+           !
+           address-family ipv4 unicast vrf RED autonomous-system 10
+            !
+            topology base
+            exit-af-topology
+            network 10.0.12.0 0.0.0.255
+            network 10.0.23.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN autonomous-system 20
+            !
+            topology base
+            exit-af-topology
+            network 172.16.12.0 0.0.0.255
+            network 172.16.23.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE autonomous-system 30
+            !
+            topology base
+            exit-af-topology
+            network 192.168.12.0
+            network 192.168.23.0
+           exit-address-family
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast vrf RED
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -93
+    y: 54
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 4586 bytes
+          !
+          ! Last configuration change at 12:59:44 UTC Sat Mar 14 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition GREEN
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip vrf BLUE
+          !
+          ip vrf RED
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip vrf forwarding RED
+           ip address 10.0.3.3 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           vrf forwarding GREEN
+           ip address 172.16.3.3 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           ip vrf forwarding BLUE
+           ip address 192.168.3.3 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3.1
+           encapsulation dot1Q 100
+           ip vrf forwarding RED
+           ip address 10.0.23.3 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3.2
+           encapsulation dot1Q 200
+           vrf forwarding GREEN
+           ip address 172.16.23.3 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          interface GigabitEthernet0/3.3
+           encapsulation dot1Q 300
+           ip vrf forwarding BLUE
+           ip address 192.168.23.3 255.255.255.0
+           ipv6 enable
+           ospfv3 1 ipv4 area 0
+          !
+          !
+          router eigrp VREXAMPLE_R3
+           !
+           address-family ipv4 unicast vrf RED autonomous-system 10
+            !
+            topology base
+            exit-af-topology
+            network 10.0.3.0 0.0.0.255
+            network 10.0.23.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN autonomous-system 20
+            !
+            topology base
+            exit-af-topology
+            network 172.16.3.0 0.0.0.255
+            network 172.16.23.0 0.0.0.255
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE autonomous-system 30
+            !
+            topology base
+            exit-af-topology
+            network 192.168.3.0
+            network 192.168.23.0
+           exit-address-family
+          !
+          router ospfv3 1
+           !
+           address-family ipv4 unicast vrf RED
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf GREEN
+           exit-address-family
+           !
+           address-family ipv4 unicast vrf BLUE
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner incoming ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          banner login ^C
+          **************************************************************************
+          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+          * education. IOSv is provided as-is and is not supported by Cisco's      *
+          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
+          * of the IOSv Software or Documentation to any third party for any       *
+          * purposes is expressly prohibited except as otherwise authorized by     *
+          * Cisco in writing.                                                      *
+          **************************************************************************^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R3
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: 190
+    y: 54
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname SW1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -616
+    y: -75
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -616
+    y: 45
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname SW3
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: SW3
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -606
+    y: 220
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: SW4
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: 411
+    y: -89
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PC1
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: -776
+    y: -75
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: PC2
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: -776
+    y: 45
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC3
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: PC3
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: -766
+    y: 224
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC4
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: PC4
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 617
+    y: -88
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC5
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: PC5
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 625
+    y: 61
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC6
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n12
+    image_definition: null
+    label: PC6
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: 619
+    y: 259
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname SW5
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n13
+    image_definition: null
+    label: SW5
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: 411
+    y: 59
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n14
+    image_definition: null
+    label: SW6
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: 424
+    y: 258
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n0
+    n2: n3
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
+  - id: l1
+    n1: n0
+    n2: n4
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/1<->SW2-GigabitEthernet0/0
+  - id: l2
+    n1: n0
+    n2: n5
+    i1: i3
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/2<->SW3-GigabitEthernet0/0
+  - id: l3
+    n1: n0
+    n2: n1
+    i1: i4
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/3<->R2-GigabitEthernet0/0
+  - id: l4
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i4
+    conditioning: {}
+    label: R2-GigabitEthernet0/1<->R3-GigabitEthernet0/3
+  - id: l5
+    n1: n2
+    n2: n6
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R3-GigabitEthernet0/0<->SW4-GigabitEthernet0/0
+  - id: l6
+    n1: n2
+    n2: n13
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: R3-GigabitEthernet0/1<->SW5-GigabitEthernet0/0
+  - id: l7
+    n1: n2
+    n2: n14
+    i1: i3
+    i2: i1
+    conditioning: {}
+    label: R3-GigabitEthernet0/2<->SW6-GigabitEthernet0/0
+  - id: l8
+    n1: n6
+    n2: n10
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW4-GigabitEthernet0/1<->PC4-eth0
+  - id: l9
+    n1: n13
+    n2: n11
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW5-GigabitEthernet0/1<->PC5-eth0
+  - id: l10
+    n1: n14
+    n2: n12
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW6-GigabitEthernet0/1<->PC6-eth0
+  - id: l11
+    n1: n3
+    n2: n7
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/1<->PC1-eth0
+  - id: l12
+    n1: n4
+    n2: n8
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/1<->PC2-eth0
+  - id: l13
+    n1: n5
+    n2: n9
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW3-GigabitEthernet0/1<->PC3-eth0
+lab:
+  description: |-
+    Use subi-nterfaces to demonstrate VRF lite
+
+    note: dot1q encapsulation must be used for each subi-nterface
+  notes: ''
+  title: VRF_1
+  version: 0.3.0
