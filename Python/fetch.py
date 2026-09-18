@@ -6,11 +6,6 @@
 import argparse
 from virl2_client import ClientLibrary
 
-
-# CML_URL = "192.168.30.128"
-# CML_USERNAME = "george"
-# CML_PASSWORD = "Geo1977mai19"
-
 def getClient(url, username, password):
     try:
         client = ClientLibrary(url, username, password, ssl_verify=False)
