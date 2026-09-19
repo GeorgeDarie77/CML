@@ -1,8 +1,22 @@
-# This script will connect to the CML
-# Will fetch the configuration  for a specific topology provided as argument
-# The topology (called lab) can be provided as an ID or as a NAME
+# Working with several devices requires to save the running configuration in startup configuratation
+# This script will do the job for you! You just need to provide the name of the lab or the id
+#
+# The script will requier some parameters:
+
+# --cmlUrl   -IP address of the CML Server
+# --cmlUsername  -Your user name
+# --cmlPassword  -Your password
+# --labName      -Lab name to update
+#  or
+# --labID        -ID of lab to be updated
 # Run the script with arguments like:
-# --cmlUrl 192.168.178.99 --cmlUsername user --cmlPassword password --labID   --labName DMVPN_PHASE_1
+# --cmlUrl 192.168.178.99 --cmlUsername user --cmlPassword password --labID  yourlabID --labName yourlabName
+
+# Only one parameter is required to identify the topology: --labID or --labName
+# If both provided and both are representing 2 different labs only the lab identified based on id will be updated
+# If id is missing the script will try to update the lab identified by name
+# The configuration (YAML) file will be extracted and saved on disk
+
 #The name or the id can be easily found in the CML Workbench
 #In the address bar of the explorer the id is after the IP address/lab
 # e.g. https://192.168.178.99/lab/86542ba3-125e-49de-b01e-05dee3e2e2cc
