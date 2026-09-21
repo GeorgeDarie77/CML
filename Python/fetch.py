@@ -63,7 +63,7 @@ def printLabsName(client):
     return
 
 def fetch(client, labname = None, labid = None ):
-    print(f'labname {labname}, labid {labid}')
+    print(f'Lab name << {labname} >>, Lab ID << {labid} >>')
     lab_per_name = None
     lab_per_id = None
     # Find the lab with the name provided as argument if not empty
@@ -73,7 +73,7 @@ def fetch(client, labname = None, labid = None ):
 
     if labid is not None:
         if lab_per_id is not None:
-            print(f' Lab with the id {labid} founded! Processing...')
+            print(f'Lab with the id {labid} founded! The name of the lab << {lab_per_id.title} >>! Processing...')
             if labname is not None and lab_per_name is not None:
                 if lab_per_name.id == labid:
                     print(f'Looks like the id {labid} and name {labname} are referring to the same lab! The processing will be based on the id!')
@@ -103,7 +103,7 @@ def extract_and_save_yaml(lab):
     if lab.is_active():
         allNodesList = lab.nodes()
         nodeCount = len(allNodesList)
-        print(f"[+] Successfully joined lab: {lab.title} ( id = {lab.id})")
+        print(f"[+] Successfully joined lab: {lab.title} | id = {lab.id}")
         print(f"[+] Total number of nodes in this lab: {nodeCount}")
 
         for node in allNodesList:
@@ -148,8 +148,6 @@ cml_username = args.cmlUsername
 cml_password = args.cmlPassword
 lab_name = args.labName
 lab_id = args.labID
-
-print(f'CML_URL: {cml_url}, CML_USERNAME: {cml_username}, CML_PASSWORD: {cml_password}, LAB_NAME: {lab_name}, LAB_ID: {lab_id}')
 
 ## Connect to CML Server.
 client = getClient(cml_url, cml_username, cml_password)
