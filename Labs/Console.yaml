@@ -202,9 +202,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1224 bytes
+          Current configuration : 1435 bytes
           !
-          ! Last configuration change at 12:34:33 UTC Mon Sep 21 2026
+          ! Last configuration change at 21:01:01 UTC Mon Sep 21 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -239,7 +239,8 @@ nodes:
           !
           !
           ip cef
-          no ipv6 cef
+          ipv6 unicast-routing
+          ipv6 cef
           !
           multilink bundle-name authenticated
           !
@@ -264,18 +265,20 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
-           no ip address
-           shutdown
+           ip address 192.168.1.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/1
-           no ip address
-           shutdown
+           ip address 192.168.0.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/2
            no ip address
@@ -290,6 +293,12 @@ nodes:
            duplex auto
            speed auto
            media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 1.1.1.1
+           exit-address-family
           !
           ip forward-protocol nd
           !
@@ -364,9 +373,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1207 bytes
+          Current configuration : 1418 bytes
           !
-          ! Last configuration change at 12:34:42 UTC Mon Sep 21 2026
+          ! Last configuration change at 21:01:11 UTC Mon Sep 21 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -401,7 +410,8 @@ nodes:
           !
           !
           ip cef
-          no ipv6 cef
+          ipv6 unicast-routing
+          ipv6 cef
           !
           multilink bundle-name authenticated
           !
@@ -426,18 +436,20 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
-           no ip address
-           shutdown
+           ip address 192.168.2.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/1
-           no ip address
-           shutdown
+           ip address 192.168.0.2 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/2
            no ip address
@@ -452,6 +464,12 @@ nodes:
            duplex auto
            speed auto
            media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 2.2.2.2
+           exit-address-family
           !
           ip forward-protocol nd
           !
@@ -520,7 +538,124 @@ nodes:
         type: physical
         slot: 3
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2693 bytes
+          !
+          ! Last configuration change at 21:07:40 UTC Mon Sep 21 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          service compress-config
+          !
+          hostname inserthostname-here
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           negotiation auto
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+          !
+          interface GigabitEthernet0/2
+           negotiation auto
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+          !
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner incoming ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner login ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -560,7 +695,16 @@ nodes:
         type: physical
         slot: 3
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: node.cfg
+        content: |
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.1.3/24 dev eth0
+          sudo ip route add default via 192.168.1.1 dev eth0
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -572,8 +716,8 @@ nodes:
     parameters: {}
     ram: null
     tags: []
-    x: -591
-    y: -158
+    x: -600
+    y: -160
     interfaces:
       - id: i0
         label: eth0
@@ -581,7 +725,16 @@ nodes:
         type: physical
         slot: 0
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC2
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.1.4/24 dev eth0
+          sudo ip route add default via 192.168.1.1 dev eth0
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -593,8 +746,8 @@ nodes:
     parameters: {}
     ram: null
     tags: []
-    x: -319
-    y: -144
+    x: -320
+    y: -160
     interfaces:
       - id: i0
         label: eth0
@@ -638,7 +791,113 @@ nodes:
         type: physical
         slot: 3
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: radiusd.conf
+        content: |-
+          # Basic freeRADIUS onfiguration
+          #
+          # This is what's included in the new container image for 2.9.1
+          # It's basically the stripped down version of the radiusd.conf that
+          # ships with the freeRADIUS distribution minus all the comments. Also:
+          # - no clients.conf dir inclusion (a wildcard client is defined below, note
+          #   the shared secret)
+          # - a few more lines/sections have been commented out that were found to not
+          #   be required for very basic RADIUS testing.
+          #
+          # NOTE it should be possible to successfully use this radiusd.conf with the
+          #      container image that ships with CML 2.9.0
+
+          prefix = /usr
+          exec_prefix = /usr
+          sysconfdir = /etc
+          localstatedir = /var
+          sbindir = ${exec_prefix}/sbin
+          logdir = /var/log/freeradius
+          raddbdir = /etc/freeradius/3.0
+          radacctdir = ${logdir}/radacct
+          name = freeradius
+          confdir = ${raddbdir}
+          modconfdir = ${confdir}/mods-config
+          certdir = ${confdir}/certs
+          cadir   = ${confdir}/certs
+          run_dir = ${localstatedir}/run/${name}
+          db_dir = ${raddbdir}
+          libdir = /usr/lib/freeradius
+          pidfile = ${run_dir}/${name}.pid
+          max_request_time = 30
+          cleanup_delay = 5
+          max_requests = 16384
+          hostname_lookups = no
+
+          log {
+              destination = syslog
+              colourise = yes
+              file = ${logdir}/radius.log
+              syslog_facility = daemon
+              stripped_names = no
+              auth = yes
+              auth_reject = yes
+              auth_badpass = yes
+              auth_goodpass = yes
+              msg_denied = "You are already logged in - access denied"
+          }
+
+          checkrad = ${sbindir}/checkrad
+
+          #ENV {
+          #}
+
+          security {
+              user = freerad
+              group = freerad
+              allow_core_dumps = no
+              max_attributes = 200
+              reject_delay = 1
+              status_server = yes
+          }
+
+          proxy_requests = no
+          #$INCLUDE proxy.conf
+
+          #$INCLUDE clients.conf
+          client all-devices {
+              ipaddr = *
+              secret = geheim
+              require_message_authenticator = no
+              nas_type = cisco
+          }
+
+          thread pool {
+              start_servers = 5
+              max_servers = 32
+              min_spare_servers = 3
+              max_spare_servers = 10
+              max_requests_per_server = 0
+              auto_limit_acct = no
+          }
+
+          modules {
+              $INCLUDE mods-enabled/
+          }
+
+          #instantiate {
+          #}
+
+          policy {
+              $INCLUDE policy.d/
+          }
+
+          $INCLUDE sites-enabled/
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 192.168.2.254/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.2.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          exit 0
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -674,7 +933,16 @@ nodes:
         type: physical
         slot: 3
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC3
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.3/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -695,7 +963,16 @@ nodes:
         type: physical
         slot: 0
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC4
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.4/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -716,7 +993,124 @@ nodes:
         type: physical
         slot: 0
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2693 bytes
+          !
+          ! Last configuration change at 21:07:59 UTC Mon Sep 21 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          service compress-config
+          !
+          hostname inserthostname-here
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           negotiation auto
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+          !
+          interface GigabitEthernet0/2
+           negotiation auto
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+          !
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner incoming ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner login ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
     cpu_limit: null
     cpus: null
     data_volume: null
