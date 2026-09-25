@@ -202,14 +202,14 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1435 bytes
+          Current configuration : 1904 bytes
           !
-          ! Last configuration change at 21:01:01 UTC Mon Sep 21 2026
+          ! Last configuration change at 02:32:41 UTC Thu Sep 24 2026
           !
           version 15.9
           service timestamps debug datetime msec
           service timestamps log datetime msec
-          no service password-encryption
+          service password-encryption
           !
           hostname R1
           !
@@ -219,7 +219,19 @@ nodes:
           !
           no logging console
           !
-          no aaa new-model
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa authentication login LOGIN group TACACS_GROUP local
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
           !
           !
           !
@@ -247,6 +259,7 @@ nodes:
           !
           !
           !
+          username george privilege 15 secret 9 $9$xUhWZEkNvLDQC9$7.fQh7lG67Pm1DShg6Io0EiO65qfG3ziorCNM4IQEPk
           !
           redundancy
           !
@@ -309,22 +322,32 @@ nodes:
           ipv6 ioam timestamp
           !
           !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key 7 00301205055818361825
+          !
+          !
           !
           control-plane
           !
-          banner exec ^CC ^C
-          banner incoming ^CC ^C
-          banner login ^CC ^C
-          banner motd ^CC ^C
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
           !
           line con 0
            exec-timeout 0 0
+           password 7 14341D051F0B262E143F37
            logging synchronous
+           length 0
+           transport output all
           line aux 0
           line vty 0 4
            exec-timeout 0 0
-           login
-           transport input none
+           password 7 0105121D6B1C02
+           login authentication LOGIN
+           length 0
+           transport input all
           !
           no scheduler allocate
           !
@@ -373,16 +396,16 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1418 bytes
+          Current configuration : 1904 bytes
           !
-          ! Last configuration change at 21:01:11 UTC Mon Sep 21 2026
+          ! Last configuration change at 02:32:50 UTC Thu Sep 24 2026
           !
           version 15.9
           service timestamps debug datetime msec
           service timestamps log datetime msec
-          no service password-encryption
+          service password-encryption
           !
-          hostname R2
+          hostname R1
           !
           boot-start-marker
           boot-end-marker
@@ -390,7 +413,19 @@ nodes:
           !
           no logging console
           !
-          no aaa new-model
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa authentication login LOGIN group TACACS_GROUP local
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
           !
           !
           !
@@ -418,6 +453,7 @@ nodes:
           !
           !
           !
+          username george privilege 15 secret 9 $9$xUhWZEkNvLDQC9$7.fQh7lG67Pm1DShg6Io0EiO65qfG3ziorCNM4IQEPk
           !
           redundancy
           !
@@ -436,7 +472,7 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
-           ip address 192.168.2.1 255.255.255.0
+           ip address 192.168.1.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
@@ -444,7 +480,7 @@ nodes:
            ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/1
-           ip address 192.168.0.2 255.255.255.0
+           ip address 192.168.0.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
@@ -468,7 +504,7 @@ nodes:
           router ospfv3 110
            !
            address-family ipv4 unicast
-            router-id 2.2.2.2
+            router-id 1.1.1.1
            exit-address-family
           !
           ip forward-protocol nd
@@ -480,21 +516,32 @@ nodes:
           ipv6 ioam timestamp
           !
           !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key 7 00301205055818361825
+          !
+          !
           !
           control-plane
           !
-          banner exec ^CC ^C
-          banner incoming ^CC ^C
-          banner login ^CC ^C
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
           !
           line con 0
            exec-timeout 0 0
+           password 7 14341D051F0B262E143F37
            logging synchronous
+           length 0
+           transport output all
           line aux 0
           line vty 0 4
            exec-timeout 0 0
-           login
-           transport input none
+           password 7 0105121D6B1C02
+           login authentication LOGIN
+           length 0
+           transport input all
           !
           no scheduler allocate
           !
@@ -543,9 +590,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2693 bytes
+          Current configuration : 2696 bytes
           !
-          ! Last configuration change at 21:07:40 UTC Mon Sep 21 2026
+          ! Last configuration change at 02:33:40 UTC Thu Sep 24 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -619,7 +666,7 @@ nodes:
           !
           control-plane
           !
-          banner exec ^C
+          banner exec ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -628,7 +675,7 @@ nodes:
 
           By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
           ^C
-          banner incoming ^C
+          banner incoming ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -637,7 +684,7 @@ nodes:
 
           By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
           ^C
-          banner login ^C
+          banner login ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -697,7 +744,7 @@ nodes:
   - boot_disk_size: null
     configuration:
       - name: node.cfg
-        content: |
+        content: |-
           # this is a shell script which will be sourced at boot
           hostname PC1
           # configurable user account
@@ -755,7 +802,55 @@ nodes:
         type: physical
         slot: 0
   - boot_disk_size: null
-    configuration: []
+    configuration:
+      - name: tac_plus.conf
+        content: |-
+          key = TacacsPwd
+          accounting file = /var/log/tacplus-acct.log
+          acl = default {
+            permit = 0.0.0.0
+          }
+          host = 0.0.0.0 {
+            prompt = "TACACS+ auth: "
+          }
+          group = netadmin {
+            default service = permit
+            service = exec {
+              priv-lvl = 15
+            }
+          }
+          group = netoper {
+            default service = permit
+            service = exec {
+              priv-lvl = 1
+            }
+          }
+          user = $enab15$ {
+            login = cleartext admin123
+          }
+          user = tacadmin {
+            login = cleartext admin123
+            member = netadmin
+          }
+          user = tacoper {
+            login = cleartext oper123
+            member = netoper
+          }
+          user = george {
+              login = cleartext geopwd
+              member = netadmin
+          }
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 192.168.1.254/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.1.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          #exit 0
+          /bin/sh
     cpu_limit: null
     cpus: null
     data_volume: null
@@ -767,8 +862,8 @@ nodes:
     parameters: {}
     ram: null
     tags: []
-    x: -708
-    y: -295
+    x: -707
+    y: -293
     interfaces:
       - id: i0
         label: eth0
@@ -998,9 +1093,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2693 bytes
+          Current configuration : 2696 bytes
           !
-          ! Last configuration change at 21:07:59 UTC Mon Sep 21 2026
+          ! Last configuration change at 02:33:43 UTC Thu Sep 24 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -1074,7 +1169,7 @@ nodes:
           !
           control-plane
           !
-          banner exec ^C
+          banner exec ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -1083,7 +1178,7 @@ nodes:
 
           By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
           ^C
-          banner incoming ^C
+          banner incoming ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -1092,7 +1187,7 @@ nodes:
 
           By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
           ^C
-          banner login ^C
+          banner login ^CC
           IOSv - Cisco Systems Confidential -
 
           Supplemental End User License Restrictions
@@ -1214,7 +1309,9 @@ links:
     conditioning: {}
     label: SW2-GigabitEthernet0/3<->PC4-eth0
 lab:
-  description: ''
+  description: |-
+    RADIUS - Remote Authentication Dial-In User Service
+    TACACS+ - Terminal Access Controller Access-Control System Plus)
   notes: ''
   title: Console
   version: 0.3.0
