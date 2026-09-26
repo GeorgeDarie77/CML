@@ -5,6 +5,7 @@ setlocal enabledelayedexpansion
 set "CML_URL=192.168.178.99"
 set "CML_USER=george"
 set "CML_PASS=Geo19mai1977"
+set "YAML_PATH=Z:\Cisco\CML GIT\CML\Labs"
 
 :: Initialize variables
 set "LAB_ID="
@@ -45,7 +46,7 @@ goto :ASK_NAME
 
 :BUILD_COMMAND
 :: Build the core Python command with static credentials
-set "CMD_ARGS=--cmlUrl "%CML_URL%" --cmlUsername "%CML_USER%" --cmlPassword "%CML_PASS%""
+set "CMD_ARGS=--cmlUrl "%CML_URL%" --cmlUsername "%CML_USER%" --cmlPassword "%CML_PASS%" --yamlPath "%YAML_PATH%""
 
 :: Append Lab ID if it was provided
 if not "%LAB_ID%"=="" (

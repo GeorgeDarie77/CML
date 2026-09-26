@@ -25,6 +25,7 @@
 
 import argparse
 from virl2_client import ClientLibrary
+from pathlib import Path
 import time
 
 devices = ["iosv", "iol-xe", "iol-xe-serial-4eth", "iosxrv9000", "frr", "iosvl2", "ioll2-xe", "cat9000v-q200", "cat9000v-uadp", "nxosv9000", "unmanaged_switch"]
@@ -62,7 +63,7 @@ def printLabsName(client):
         print(lab.title)
     return
 
-def fetch(client, labname = None, labid = None ):
+def fetch(client, labname = None, labid = None, yamlpath = None):
     print(f'Lab name << {labname} >>, Lab ID << {labid} >>')
     lab_per_name = None
     lab_per_id = None
@@ -80,13 +81,13 @@ def fetch(client, labname = None, labid = None ):
                 else:
                     print(f'Looks like the id {labid} and name {labname} are referring to different labs! The processing per id will have precedence and the processing per name will be ignored!')
 
-            extract_and_save_yaml(lab_per_id)
+            extract_and_save_yaml(lab_per_id,yamlpath)
         else:
             if labname is not None:
                 print(f'Fallback to the lab name {labname}')
                 if lab_per_name is not None:
                     print(f' Lab with the id {labid} NOT founded but the lab with the name {labname} founded! Processing...')
-                    extract_and_save_yaml(lab_per_name)
+                    extract_and_save_yaml(lab_per_name,yamlpath)
                 else:
                     print(f'Could not find a lab with the id {labid} nor with the name {labname}. Aborting!!!')
             else:
@@ -94,12 +95,12 @@ def fetch(client, labname = None, labid = None ):
     else:
         if lab_per_name is not None:
             print(f'Lab with the name {labname} founded! Processing...')
-            extract_and_save_yaml(lab_per_name)
+            extract_and_save_yaml(lab_per_name,yamlpath)
         else:
             print(f'Could not find a lab with the name {labname}! Aborting!!!')
     return
 
-def extract_and_save_yaml(lab):
+def extract_and_save_yaml(lab,yamlpath):
     if lab.is_active():
         allNodesList = lab.nodes()
         nodeCount = len(allNodesList)
@@ -124,10 +125,14 @@ def extract_and_save_yaml(lab):
 
         print("[*] Generate and download YML...")
         yaml_data = lab.download()
-        filename = f"{lab.title}_backup.yaml"
-        with open(filename, "w", encoding="utf-8") as file:
+        filename = f"{lab.title}.yaml"
+        if yamlpath is None:
+            filepath = filename
+        else:
+            filepath = Path(yamlpath)/filename
+        with open(filepath, "w", encoding="utf-8") as file:
             file.write(yaml_data)
-        print(f"[+] Success! File saved as: {filename}")
+        print(f"[+] Success! File saved as: {filename} at {yamlpath}")
     else:
         print(f'Lab >>{lab.title} | {lab.id} << is not active! Nothing to do! Aborting!!!')
     return
@@ -138,6 +143,7 @@ parser.add_argument("--cmlUsername", required=True, help="User name")
 parser.add_argument("--cmlPassword", required=True, help="Password")
 parser.add_argument("--labName", required=False, help="Lab name to update...")
 parser.add_argument("--labID", required=False, help="ID of lab to be updated...")
+parser.add_argument("--yamlPath", required=False, help="Where to save the yaml file..")
 args = parser.parse_args()
 
 if not args.labName and not args.labID:
@@ -148,12 +154,13 @@ cml_username = args.cmlUsername
 cml_password = args.cmlPassword
 lab_name = args.labName
 lab_id = args.labID
+yaml_path = args.yamlPath
 
 ## Connect to CML Server.
 client = getClient(cml_url, cml_username, cml_password)
 
 if client is not None:
    #printLabsName(client)
-   if (lab_name is not None) and (lab_id is not None): fetch(client, lab_name, lab_id)
-   if (lab_name is None) and (lab_id is not None):     fetch(client, labid=lab_id)
-   if (lab_name is not None) and (lab_id is None):     fetch(client, labname=lab_name)
+   if (lab_name is not None) and (lab_id is not None): fetch(client, lab_name, lab_id,yamlpath=yaml_path)
+   if (lab_name is None) and (lab_id is not None):     fetch(client, labid=lab_id, yamlpath=yaml_path)
+   if (lab_name is not None) and (lab_id is None):     fetch(client, labname=lab_name, yamlpath=yaml_path)
