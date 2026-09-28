@@ -131,8 +131,8 @@ annotations:
     text_unit: pt
     thickness: 1
     type: text
-    x1: -154.27879143413793
-    y1: -467.94848944126613
+    x1: -157.52989753299858
+    y1: -488.95563654159645
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -147,7 +147,7 @@ annotations:
     thickness: 1
     type: text
     x1: -427.3292934626679
-    y1: -503.9607519146473
+    y1: -496.2767773143023
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -161,8 +161,8 @@ annotations:
     text_unit: pt
     thickness: 1
     type: text
-    x1: -438.3375222277
-    y1: -455.9594611279756
+    x1: -440.3125855644132
+    y1: -479.4674590735833
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -202,397 +202,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1904 bytes
-          !
-          ! Last configuration change at 02:32:41 UTC Thu Sep 24 2026
-          !
-          version 15.9
-          service timestamps debug datetime msec
-          service timestamps log datetime msec
-          service password-encryption
-          !
-          hostname R1
-          !
-          boot-start-marker
-          boot-end-marker
-          !
-          !
-          no logging console
-          !
-          aaa new-model
-          !
-          !
-          aaa group server tacacs+ TACACS_GROUP
-           server name TACACS_SERVER
-          !
-          aaa authentication login LOGIN group TACACS_GROUP local
-          !
-          !
-          !
-          !
-          !
-          aaa session-id common
-          !
-          !
-          !
-          mmi polling-interval 60
-          no mmi auto-configure
-          no mmi pvc
-          mmi snmp-timeout 180
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          ip cef
-          ipv6 unicast-routing
-          ipv6 cef
-          !
-          multilink bundle-name authenticated
-          !
-          !
-          !
-          !
-          username george privilege 15 secret 9 $9$xUhWZEkNvLDQC9$7.fQh7lG67Pm1DShg6Io0EiO65qfG3ziorCNM4IQEPk
-          !
-          redundancy
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          interface GigabitEthernet0/0
-           ip address 192.168.1.1 255.255.255.0
-           duplex auto
-           speed auto
-           media-type rj45
-           ipv6 enable
-           ospfv3 110 ipv4 area 0
-          !
-          interface GigabitEthernet0/1
-           ip address 192.168.0.1 255.255.255.0
-           duplex auto
-           speed auto
-           media-type rj45
-           ipv6 enable
-           ospfv3 110 ipv4 area 0
-          !
-          interface GigabitEthernet0/2
-           no ip address
-           shutdown
-           duplex auto
-           speed auto
-           media-type rj45
-          !
-          interface GigabitEthernet0/3
-           no ip address
-           shutdown
-           duplex auto
-           speed auto
-           media-type rj45
-          !
-          router ospfv3 110
-           !
-           address-family ipv4 unicast
-            router-id 1.1.1.1
-           exit-address-family
-          !
-          ip forward-protocol nd
-          !
-          !
-          no ip http server
-          no ip http secure-server
-          !
-          ipv6 ioam timestamp
-          !
-          !
-          tacacs server TACACS_SERVER
-           address ipv4 192.168.1.254
-           key 7 00301205055818361825
-          !
-          !
-          !
-          control-plane
-          !
-          banner exec ^CCC ^C
-          banner incoming ^CCC ^C
-          banner login ^CCC ^C
-          banner motd ^CCC ^C
-          !
-          line con 0
-           exec-timeout 0 0
-           password 7 14341D051F0B262E143F37
-           logging synchronous
-           length 0
-           transport output all
-          line aux 0
-          line vty 0 4
-           exec-timeout 0 0
-           password 7 0105121D6B1C02
-           login authentication LOGIN
-           length 0
-           transport input all
-          !
-          no scheduler allocate
-          !
-          end
-    cpu_limit: null
-    cpus: null
-    data_volume: null
-    hide_links: false
-    id: n0
-    image_definition: null
-    label: R1
-    node_definition: iosv
-    parameters: {}
-    ram: null
-    tags: []
-    x: -453
-    y: -482
-    interfaces:
-      - id: i0
-        label: Loopback0
-        mac_address: null
-        type: loopback
-      - id: i1
-        label: GigabitEthernet0/0
-        mac_address: null
-        type: physical
-        slot: 0
-      - id: i2
-        label: GigabitEthernet0/1
-        mac_address: null
-        type: physical
-        slot: 1
-      - id: i3
-        label: GigabitEthernet0/2
-        mac_address: null
-        type: physical
-        slot: 2
-      - id: i4
-        label: GigabitEthernet0/3
-        mac_address: null
-        type: physical
-        slot: 3
-  - boot_disk_size: null
-    configuration:
-      - name: ios_config.txt
-        content: |-
-          Building configuration...
-
-          Current configuration : 1904 bytes
-          !
-          ! Last configuration change at 02:32:50 UTC Thu Sep 24 2026
-          !
-          version 15.9
-          service timestamps debug datetime msec
-          service timestamps log datetime msec
-          service password-encryption
-          !
-          hostname R1
-          !
-          boot-start-marker
-          boot-end-marker
-          !
-          !
-          no logging console
-          !
-          aaa new-model
-          !
-          !
-          aaa group server tacacs+ TACACS_GROUP
-           server name TACACS_SERVER
-          !
-          aaa authentication login LOGIN group TACACS_GROUP local
-          !
-          !
-          !
-          !
-          !
-          aaa session-id common
-          !
-          !
-          !
-          mmi polling-interval 60
-          no mmi auto-configure
-          no mmi pvc
-          mmi snmp-timeout 180
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          ip cef
-          ipv6 unicast-routing
-          ipv6 cef
-          !
-          multilink bundle-name authenticated
-          !
-          !
-          !
-          !
-          username george privilege 15 secret 9 $9$xUhWZEkNvLDQC9$7.fQh7lG67Pm1DShg6Io0EiO65qfG3ziorCNM4IQEPk
-          !
-          redundancy
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          !
-          interface GigabitEthernet0/0
-           ip address 192.168.1.1 255.255.255.0
-           duplex auto
-           speed auto
-           media-type rj45
-           ipv6 enable
-           ospfv3 110 ipv4 area 0
-          !
-          interface GigabitEthernet0/1
-           ip address 192.168.0.1 255.255.255.0
-           duplex auto
-           speed auto
-           media-type rj45
-           ipv6 enable
-           ospfv3 110 ipv4 area 0
-          !
-          interface GigabitEthernet0/2
-           no ip address
-           shutdown
-           duplex auto
-           speed auto
-           media-type rj45
-          !
-          interface GigabitEthernet0/3
-           no ip address
-           shutdown
-           duplex auto
-           speed auto
-           media-type rj45
-          !
-          router ospfv3 110
-           !
-           address-family ipv4 unicast
-            router-id 1.1.1.1
-           exit-address-family
-          !
-          ip forward-protocol nd
-          !
-          !
-          no ip http server
-          no ip http secure-server
-          !
-          ipv6 ioam timestamp
-          !
-          !
-          tacacs server TACACS_SERVER
-           address ipv4 192.168.1.254
-           key 7 00301205055818361825
-          !
-          !
-          !
-          control-plane
-          !
-          banner exec ^CCC ^C
-          banner incoming ^CCC ^C
-          banner login ^CCC ^C
-          banner motd ^CCC ^C
-          !
-          line con 0
-           exec-timeout 0 0
-           password 7 14341D051F0B262E143F37
-           logging synchronous
-           length 0
-           transport output all
-          line aux 0
-          line vty 0 4
-           exec-timeout 0 0
-           password 7 0105121D6B1C02
-           login authentication LOGIN
-           length 0
-           transport input all
-          !
-          no scheduler allocate
-          !
-          end
-    cpu_limit: null
-    cpus: null
-    data_volume: null
-    hide_links: false
-    id: n1
-    image_definition: null
-    label: R2
-    node_definition: iosv
-    parameters: {}
-    ram: null
-    tags: []
-    x: -112
-    y: -482
-    interfaces:
-      - id: i0
-        label: Loopback0
-        mac_address: null
-        type: loopback
-      - id: i1
-        label: GigabitEthernet0/0
-        mac_address: null
-        type: physical
-        slot: 0
-      - id: i2
-        label: GigabitEthernet0/1
-        mac_address: null
-        type: physical
-        slot: 1
-      - id: i3
-        label: GigabitEthernet0/2
-        mac_address: null
-        type: physical
-        slot: 2
-      - id: i4
-        label: GigabitEthernet0/3
-        mac_address: null
-        type: physical
-        slot: 3
-  - boot_disk_size: null
-    configuration:
-      - name: ios_config.txt
-        content: |-
-          Building configuration...
-
           Current configuration : 2696 bytes
           !
-          ! Last configuration change at 02:33:40 UTC Thu Sep 24 2026
+          ! Last configuration change at 07:49:16 UTC Thu Sep 24 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -707,7 +319,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n2
+    id: n0
     image_definition: null
     label: SW1
     node_definition: iosvl2
@@ -756,7 +368,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n3
+    id: n1
     image_definition: null
     label: PC1
     node_definition: desktop
@@ -786,7 +398,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n4
+    id: n2
     image_definition: null
     label: PC2
     node_definition: desktop
@@ -855,15 +467,15 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n5
+    id: n3
     image_definition: null
     label: TACACS+
     node_definition: tacplus
     parameters: {}
     ram: null
     tags: []
-    x: -707
-    y: -293
+    x: -717
+    y: -296
     interfaces:
       - id: i0
         label: eth0
@@ -957,7 +569,7 @@ nodes:
           #$INCLUDE clients.conf
           client all-devices {
               ipaddr = *
-              secret = geheim
+              secret = RadiusPwd
               require_message_authenticator = no
               nas_type = cisco
           }
@@ -983,6 +595,13 @@ nodes:
           }
 
           $INCLUDE sites-enabled/
+      - name: users
+        content: |+
+          testuser Cleartext-Password := "testpassword"
+
+
+          george Cleartext-Password := "geopwd"
+
       - name: boot.sh
         content: |-
           # insert more commands here
@@ -997,7 +616,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n6
+    id: n4
     image_definition: null
     label: RADIUS
     node_definition: radius
@@ -1042,7 +661,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n7
+    id: n5
     image_definition: null
     label: PC3
     node_definition: desktop
@@ -1072,7 +691,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n8
+    id: n6
     image_definition: null
     label: PC4
     node_definition: desktop
@@ -1095,7 +714,7 @@ nodes:
 
           Current configuration : 2696 bytes
           !
-          ! Last configuration change at 02:33:43 UTC Thu Sep 24 2026
+          ! Last configuration change at 07:49:18 UTC Thu Sep 24 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -1210,7 +829,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n9
+    id: n7
     image_definition: null
     label: SW2
     node_definition: iosvl2
@@ -1244,70 +863,474 @@ nodes:
         mac_address: null
         type: physical
         slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+
+          Current configuration : 2178 bytes
+          !
+          ! Last configuration change at 12:26:37 UTC Mon Sep 28 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login LOGIN group TACACS_GROUP local
+          aaa authorization exec default group tacacs+ group radius local
+          aaa authorization exec EXEC group RADIUS_GROUP group TACACS_GROUP local
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip domain name testlab.com
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          username george privilege 15 secret 9 $9$EI7QLNQ0TMvCMf$cSpVh6neo9jk1MAUDdAZVNs4wjIfdt1X.7bxdPlfNJk
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip address 192.168.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           ip address 192.168.0.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 1.1.1.1
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip ssh version 2
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          banner motd ^C ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           authorization exec EXEC
+           login authentication LOGIN
+           length 0
+           transport input all
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -455
+    y: -499
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2015 bytes
+          !
+          ! Last configuration change at 12:26:46 UTC Mon Sep 28 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login LOGIN group RADIUS_GROUP local
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip domain name testlab.com
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          username george privilege 15 secret 9 $9$4eloqBkAJCccVf$2ibavczZ9wURl9O8yLz54d58xBHh6ZfVtq8hZAil8Wc
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip address 192.168.2.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           ip address 192.168.0.2 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 2.2.2.2
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip ssh version 2
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          banner motd ^C ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login authentication LOGIN
+           length 0
+           transport input all
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    parameters: {}
+    ram: null
+    tags: []
+    x: -116
+    y: -499
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
 links:
   - id: l0
     n1: n0
-    n2: n1
-    i1: i2
-    i2: i2
-    conditioning: {}
-    label: R1-GigabitEthernet0/1<->R2-GigabitEthernet0/1
-  - id: l1
-    n1: n0
-    n2: n2
-    i1: i1
-    i2: i1
-    conditioning: {}
-    label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
-  - id: l2
-    n1: n1
-    n2: n9
-    i1: i1
-    i2: i1
-    conditioning: {}
-    label: R2-GigabitEthernet0/0<->SW2-GigabitEthernet0/0
-  - id: l3
-    n1: n2
-    n2: n5
+    n2: n3
     i1: i2
     i2: i0
     conditioning: {}
     label: SW1-GigabitEthernet0/1<->TACACS+-eth0
-  - id: l4
-    n1: n2
-    n2: n3
+  - id: l1
+    n1: n0
+    n2: n1
     i1: i3
     i2: i0
     conditioning: {}
     label: SW1-GigabitEthernet0/2<->PC1-eth0
-  - id: l5
-    n1: n2
-    n2: n4
+  - id: l2
+    n1: n0
+    n2: n2
     i1: i4
     i2: i0
     conditioning: {}
     label: SW1-GigabitEthernet0/3<->PC2-eth0
-  - id: l6
-    n1: n9
-    n2: n6
+  - id: l3
+    n1: n7
+    n2: n4
     i1: i2
     i2: i0
     conditioning: {}
     label: SW2-GigabitEthernet0/1<->RADIUS-eth0
-  - id: l7
-    n1: n9
-    n2: n7
+  - id: l4
+    n1: n7
+    n2: n5
     i1: i3
     i2: i0
     conditioning: {}
     label: SW2-GigabitEthernet0/2<->PC3-eth0
-  - id: l8
-    n1: n9
-    n2: n8
+  - id: l5
+    n1: n7
+    n2: n6
     i1: i4
     i2: i0
     conditioning: {}
     label: SW2-GigabitEthernet0/3<->PC4-eth0
+  - id: l6
+    n1: n8
+    n2: n0
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
+  - id: l7
+    n1: n9
+    n2: n7
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R2-GigabitEthernet0/0<->SW2-GigabitEthernet0/0
+  - id: l8
+    n1: n8
+    n2: n9
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R1-GigabitEthernet0/1<->R2-GigabitEthernet0/1
 lab:
   description: |-
     RADIUS - Remote Authentication Dial-In User Service
