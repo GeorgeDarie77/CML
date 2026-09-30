@@ -1,0 +1,6 @@
+Operațiune AAA							Linie Consolă (fizică)					Linie VTY (Telnet/SSH)			Suportat de TACACS+?			Suportat de RADIUS?
+Authentication (Login)					DA (Local / Server)						DA (Local / Server)				DA								DA
+Authorization EXEC (Shell)				DA, dar se recomandă local/TACACS+ 		DA (Server / Local)				DA (Nativ)						LIMITAT (Eșuează des pe consolă)
+Authorization Commands (Comenzi)		DA (doar cu TACACS+)					DA (doar cu TACACS+)			DA (Nativ per comandă)			NU ❌ (Nu știe comenzi)
+Accounting EXEC (Sesiuni)				DA										DA								DA								DA
+Accounting Commands (Comenzi)			DA (doar cu TACACS+)					DA (doar cu TACACS+)			DA (Nativ)						NU ❌ (Nu știe comenzi)

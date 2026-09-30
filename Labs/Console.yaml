@@ -194,6 +194,81 @@ annotations:
     x1: -330.3330044743491
     y1: -184.92864359618898
     z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 'Accountig: Only on TACCS server / group'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -958.2511319203737
+    y1: -386.5054511708654
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.5'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -369.3070273925814
+    y1: -779.9923761881038
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.6'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -366.31299728093813
+    y1: -628.974466523034
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 'PC5: Authentication/Accounting using 802.1x per user'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -538.189819553468
+    y1: -992.6096821946049
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 'PC5: Authentication/Accounting using 802.1x machine'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -540.1965961834945
+    y1: -961.6111343296105
+    z_index: 1
 smart_annotations: []
 nodes:
   - boot_disk_size: null
@@ -202,9 +277,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2696 bytes
+          Current configuration : 1041 bytes
           !
-          ! Last configuration change at 07:49:16 UTC Thu Sep 24 2026
+          ! Last configuration change at 20:06:58 UTC Thu Sep 24 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -212,7 +287,7 @@ nodes:
           no service password-encryption
           service compress-config
           !
-          hostname inserthostname-here
+          hostname SW1
           !
           boot-start-marker
           boot-end-marker
@@ -278,36 +353,15 @@ nodes:
           !
           control-plane
           !
-          banner exec ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
-          banner incoming ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
-          banner login ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          banner motd ^C ^C
           !
           line con 0
            exec-timeout 0 0
+           logging synchronous
+           length 0
           line aux 0
           line vty 0 4
            exec-timeout 0 0
@@ -597,10 +651,26 @@ nodes:
           $INCLUDE sites-enabled/
       - name: users
         content: |+
-          testuser Cleartext-Password := "testpassword"
-
-
           george Cleartext-Password := "geopwd"
+              cisco-avpair = "shell:priv-lvl=15",
+              Reply-Message = "Welcome, George!"
+
+
+          testuser Cleartext-Password := "testpassword"
+              Reply-Message = "Welcome, Test user",
+              cisco-avpair = "shell:priv-lvl=15"
+
+          pui Cleartext-Password := "puipwd"
+              Reply-Message = "Welcome, Pui!",
+              cisco-avpair = "shell:priv-lvl=15"
+
+
+          PC6$ Cleartext-Password := "PC6pwd"
+              Reply-Message = "Welcome, PC6!"
+
+          testuserPC5 Cleartext-Password := "testuserPC5pwd"
+              Reply-Message := "Welcome, testurserPC!"
+
 
       - name: boot.sh
         content: |-
@@ -623,8 +693,8 @@ nodes:
     parameters: {}
     ram: null
     tags: []
-    x: 121
-    y: -667
+    x: 118
+    y: -669
     interfaces:
       - id: i0
         label: eth0
@@ -712,9 +782,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2696 bytes
+          Current configuration : 2059 bytes
           !
-          ! Last configuration change at 07:49:18 UTC Thu Sep 24 2026
+          ! Last configuration change at 12:30:26 UTC Wed Sep 30 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -722,7 +792,7 @@ nodes:
           no service password-encryption
           service compress-config
           !
-          hostname inserthostname-here
+          hostname SW2
           !
           boot-start-marker
           boot-end-marker
@@ -730,7 +800,25 @@ nodes:
           !
           no logging console
           !
-          no aaa new-model
+          username george secret 5 $1$xa90$8tT46WI26.mZitc6WlCYK/
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication dot1x default group RADIUS_GROUP
+          aaa accounting dot1x default start-stop group RADIUS_GROUP
+          !
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
           !
           !
           !
@@ -743,6 +831,7 @@ nodes:
           no ipv6 cef
           !
           !
+          dot1x system-auth-control
           !
           spanning-tree mode pvst
           spanning-tree extend system-id
@@ -773,6 +862,30 @@ nodes:
           interface GigabitEthernet0/3
            negotiation auto
           !
+          interface GigabitEthernet1/0
+           description CONEXIUNE_PC5_USE_AUTH
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           authentication order dot1x mab
+           authentication port-control auto
+           mab
+           dot1x timeout tx-period 3
+          !
+          interface GigabitEthernet1/1
+           description CONEXIUNE_PC6_MACHINE_AUTH
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           authentication port-control auto
+           dot1x timeout tx-period 3
+          !
+          interface GigabitEthernet1/2
+           negotiation auto
+          !
+          interface GigabitEthernet1/3
+           negotiation auto
+          !
           ip forward-protocol nd
           !
           ip http server
@@ -785,43 +898,27 @@ nodes:
           !
           !
           !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
           !
           control-plane
           !
-          banner exec ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
-          banner incoming ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
-          banner login ^CC
-          IOSv - Cisco Systems Confidential -
-
-          Supplemental End User License Restrictions
-
-          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
-
-          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
-          ^C
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
           !
           line con 0
            exec-timeout 0 0
           line aux 0
           line vty 0 4
            exec-timeout 0 0
-           login
           !
           !
           end
@@ -863,6 +960,26 @@ nodes:
         mac_address: null
         type: physical
         slot: 3
+      - id: i5
+        label: GigabitEthernet1/0
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet1/1
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet1/2
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet1/3
+        mac_address: null
+        type: physical
+        slot: 7
   - boot_disk_size: null
     configuration:
       - name: ios_config.txt
@@ -870,9 +987,9 @@ nodes:
           Building configuration...
 
 
-          Current configuration : 2178 bytes
+          Current configuration : 2521 bytes
           !
-          ! Last configuration change at 12:26:37 UTC Mon Sep 28 2026
+          ! Last configuration change at 00:43:54 UTC Tue Sep 29 2026 by george
           !
           version 15.9
           service timestamps debug datetime msec
@@ -897,8 +1014,11 @@ nodes:
            server name RADIUS_SERVER
           !
           aaa authentication login LOGIN group TACACS_GROUP local
+          aaa authorization console
           aaa authorization exec default group tacacs+ group radius local
           aaa authorization exec EXEC group RADIUS_GROUP group TACACS_GROUP local
+          aaa accounting exec ACCT start-stop group TACACS_GROUP group RADIUS_GROUP
+          aaa accounting commands 15 ACCT_COMMANDS start-stop group TACACS_GROUP
           !
           !
           !
@@ -1017,14 +1137,20 @@ nodes:
           line con 0
            exec-timeout 0 0
            logging synchronous
+           login authentication LOGIN
            length 0
           line aux 0
           line vty 0 4
            exec-timeout 0 0
            authorization exec EXEC
+           accounting commands 15 ACCT_COMMANDS
+           accounting exec ACCT
            login authentication LOGIN
            length 0
            transport input all
+          line vty 5 15
+           accounting commands 15 ACCT_COMMANDS
+           transport input none
           !
           no scheduler allocate
           !
@@ -1075,7 +1201,7 @@ nodes:
 
           Current configuration : 2015 bytes
           !
-          ! Last configuration change at 12:26:46 UTC Mon Sep 28 2026
+          ! Last configuration change at 00:44:18 UTC Tue Sep 29 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -1267,6 +1393,66 @@ nodes:
         mac_address: null
         type: physical
         slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname inserthostname-here
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.5/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: PC5
+    node_definition: alpine
+    parameters: {}
+    ram: null
+    tags: []
+    x: -409
+    y: -769
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname inserthostname-here
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.6/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: PC6
+    node_definition: alpine
+    parameters: {}
+    ram: null
+    tags: []
+    x: -400
+    y: -640
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
 links:
   - id: l0
     n1: n0
@@ -1331,6 +1517,20 @@ links:
     i2: i2
     conditioning: {}
     label: R1-GigabitEthernet0/1<->R2-GigabitEthernet0/1
+  - id: l9
+    n1: n10
+    n2: n7
+    i1: i0
+    i2: i5
+    conditioning: {}
+    label: PC5-eth0<->SW2-GigabitEthernet1/0
+  - id: l10
+    n1: n11
+    n2: n7
+    i1: i0
+    i2: i6
+    conditioning: {}
+    label: PC6-eth0<->SW2-GigabitEthernet1/1
 lab:
   description: |-
     RADIUS - Remote Authentication Dial-In User Service
