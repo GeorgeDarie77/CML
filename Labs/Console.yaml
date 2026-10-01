@@ -277,9 +277,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1041 bytes
+          Current configuration : 1696 bytes
           !
-          ! Last configuration change at 20:06:58 UTC Thu Sep 24 2026
+          ! Last configuration change at 01:27:22 UTC Fri Sep 25 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -295,7 +295,25 @@ nodes:
           !
           no logging console
           !
-          no aaa new-model
+          username george secret 5 $1$CJpZ$dxkMQu.p50.VncWhJarSX/
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login LOGIN group TACACS_GROUP local
+          aaa authorization exec default group tacacs+ group radius local
+          !
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
           !
           !
           !
@@ -336,7 +354,11 @@ nodes:
            negotiation auto
           !
           interface GigabitEthernet0/3
+           switchport mode access
            negotiation auto
+          !
+          interface Vlan1
+           ip address 192.168.1.2 255.255.255.0
           !
           ip forward-protocol nd
           !
@@ -349,6 +371,15 @@ nodes:
           !
           !
           !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
           !
           !
           control-plane
@@ -365,7 +396,9 @@ nodes:
           line aux 0
           line vty 0 4
            exec-timeout 0 0
-           login
+           login authentication LOGIN
+           length 0
+           transport input all
           !
           !
           end
@@ -782,9 +815,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2059 bytes
+          Current configuration : 2248 bytes
           !
-          ! Last configuration change at 12:30:26 UTC Wed Sep 30 2026
+          ! Last configuration change at 17:51:02 UTC Wed Sep 30 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -824,10 +857,11 @@ nodes:
           !
           !
           !
+          no ip routing
           !
           !
           !
-          ip cef
+          no ip cef
           no ipv6 cef
           !
           !
@@ -851,6 +885,8 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
            negotiation auto
           !
           interface GigabitEthernet0/1
@@ -886,6 +922,11 @@ nodes:
           interface GigabitEthernet1/3
            negotiation auto
           !
+          interface Vlan99
+           ip address 192.168.92.254 255.255.255.0
+           no ip route-cache
+          !
+          ip default-gateway 192.168.92.1
           ip forward-protocol nd
           !
           ip http server
@@ -989,7 +1030,7 @@ nodes:
 
           Current configuration : 2521 bytes
           !
-          ! Last configuration change at 00:43:54 UTC Tue Sep 29 2026 by george
+          ! Last configuration change at 06:04:10 UTC Tue Sep 29 2026 by george
           !
           version 15.9
           service timestamps debug datetime msec
@@ -1199,9 +1240,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2015 bytes
+          Current configuration : 2319 bytes
           !
-          ! Last configuration change at 00:44:18 UTC Tue Sep 29 2026
+          ! Last configuration change at 06:04:39 UTC Tue Sep 29 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -1279,10 +1320,24 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
-           ip address 192.168.2.1 255.255.255.0
+           no ip address
            duplex auto
            speed auto
            media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/0.1
+           description For VLAN 1
+           encapsulation dot1Q 1 native
+           ip address 192.168.2.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/0.2
+           description Management VLAN 99
+           encapsulation dot1Q 99
+           ip address 192.168.92.1 255.255.255.0
            ipv6 enable
            ospfv3 110 ipv4 area 0
           !
