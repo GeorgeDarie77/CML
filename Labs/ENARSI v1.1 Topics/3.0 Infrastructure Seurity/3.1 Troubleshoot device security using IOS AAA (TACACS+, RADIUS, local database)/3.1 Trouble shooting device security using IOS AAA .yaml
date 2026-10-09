@@ -1,0 +1,1625 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 192.168.0.0 /24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -354.27879143413793
+    y1: -515.9239644945038
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 192.168.1.0 /24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -442.2994440208852
+    y1: -394.9108952794529
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 192.168.2.0 /24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -99.25055547569468
+    y1: -584.9480053962642
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.3'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -248.34176812014675
+    y1: -862.0819498308578
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.4'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 14.824847845074643
+    y1: -860.0991206692453
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.254'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 97.78026768218237
+    y1: -703.9976072497783
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.254'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -687.371244029498
+    y1: -317.9307411245303
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -99.26346334241157
+    y1: -520.9505869696077
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.2'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -157.52989753299858
+    y1: -488.95563654159645
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -427.3292934626679
+    y1: -496.2767773143023
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -439.31058428246314
+    y1: -472.45345009993235
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.3'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -608.0960615336061
+    y1: -189.97998718049874
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: '.4'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -346.36502498555166
+    y1: -184.92864359618886
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#050505'
+    rotation: 0
+    text_bold: true
+    text_content: 'Accountig commands: Only on TACCS server / group'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -958.2511319203737
+    y1: -386.5054511708654
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      Router on stick
+      SVI1  > G0/0.1 192.168.2.1
+      SVI2  > G0/0.2 192.168.92.1 - for Management VLAN
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -77.49189536586269
+    y1: -541.6962948351022
+    z_index: 2
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          *Oct  7 03:08:47.307: TPLUS: Queuing AAA Accounting request 13 for processing
+          *Oct  7 03:08:47.307: TPLUS: processing accounting request id 13
+          *Oct  7 03:08:47.307: TPLUS: Sending AV task_id=23
+          *Oct  7 03:08:47.307: TPLUS: Sending AV timezone=UTC
+          *Oct  7 03:08:47.307: TPLUS: Sending AV service=shell
+          *Oct  7 03:08:47.308: TPLUS: Sending AV priv-lvl=15
+          *Oct  7 03:08:47.308: TPLUS: Sending AV cmd=configure terminal <cr>
+          *Oct  7 03:08:47.308: TPLUS: Accounting request created for 13(george)
+          *Oct  7 03:08:47.308: TPLUS: using previously set server 192.168.1.254 from group TACACS_GROUP
+          *Oct  7 03:08:47.310: TPLUS(0000000D)/0/NB_WAIT/EA9D250: Started 5 sec timeout
+          *Oct  7 03:08:47.312: TPLUS(0000000D)/0/NB_WAIT: socket event 2
+          *Oct  7 03:08:47.314: TPLUS(0000000D)/0/NB_WAIT: wrote entire 114 bytes request
+          *Oct  7 03:08:47.314: TPLUS(0000000D)/0/READ: socket event 1
+          *Oct  7 03:08:47.314: TPLUS(0000000D)/0/READ: Would block while reading
+          *Oct  7 03:08:47.316: TPLUS(0000000D)/0/READ: socket event 1
+          *Oct  7 03:08:47.316: TPLUS(0000000D)/0/READ: read entire 12 header bytes (expect 5 bytes data)
+          *Oct  7 03:08:47.316: TPLUS(0000000D)/0/READ: socket event 1
+          *Oct  7 03:08:47.316: TPLUS(0000000D)/0/READ: read entire 17 bytes response
+          *Oct  7 03:08:47.317: TPLUS(0000000D)/0/EA9D250: Processing the reply packet
+          Current configuration : 2903 bytes
+          !
+          ! Last configuration change at 03:08:47 UTC Wed Oct 7 2026 by george
+          !
+          version 15.2
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          service compress-config
+          !
+          hostname SW1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          username george privilege 15 secret 5 $1$/nUw$WRvI6Apt.pRQxxC45POwc0
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login default local
+          aaa authentication login T_LOGIN_ONLY group TACACS_GROUP local
+          aaa authentication login R_LOGIN_ONLY group RADIUS_GROUP local
+          aaa authentication login R_T_LOGIN group RADIUS_GROUP group TACACS_GROUP local
+          aaa authentication login T_R_LOGIN group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization console
+          aaa authorization exec R_EXEC_ONLY group RADIUS_GROUP local
+          aaa authorization exec T_EXEC_ONLY group TACACS_GROUP local
+          aaa authorization exec T_R_EXEC group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization exec R_T_EXEC group RADIUS_GROUP group TACACS_GROUP local
+          aaa accounting exec R_ACCT_ONLY start-stop group RADIUS_GROUP
+          aaa accounting exec T_ACCT_ONLY start-stop group TACACS_GROUP
+          aaa accounting exec R_T_ACCT start-stop group RADIUS_GROUP group RADIUS_GROUP
+          aaa accounting exec T_R_ACCT start-stop group TACACS_GROUP group RADIUS_GROUP
+          aaa accounting commands 15 T_ACCT_COMMANDS start-stop group TACACS_GROUP
+          !
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          no process cpu extended history
+          no process cpu autoprofile hog
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          no cdp run
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/2
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+           no cdp enable
+          !
+          interface Vlan1
+           ip address 192.168.1.2 255.255.255.0
+          !
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          no service-routing capabilities-manager
+          !
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          !
+          line con 0
+           exec-timeout 0 0
+           authorization exec R_T_EXEC
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec R_T_ACCT
+           logging synchronous
+           login authentication R_T_LOGIN
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           authorization exec T_R_EXEC
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec T_R_ACCT
+           logging synchronous
+           login authentication T_R_LOGIN
+           length 0
+           transport input all
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -455
+    y: -292
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.1.3/24 dev eth0
+          sudo ip route add default via 192.168.1.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: PC1
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -600
+    y: -160
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC2
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.1.4/24 dev eth0
+          sudo ip route add default via 192.168.1.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: PC2
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -338
+    y: -150
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: tac_plus.conf
+        content: |-
+          key = TacacsPwd
+          accounting file = /var/log/tacplus-acct.log
+          acl = default {
+            permit = 0.0.0.0
+          }
+          host = 0.0.0.0 {
+            prompt = "TACACS+ auth: "
+            key = TacacsPwd
+          }
+          group = netadmin {
+            default service = permit
+            service = exec {
+              priv-lvl = 15
+            }
+          }
+          group = netoper {
+            default service = permit
+            service = exec {
+              priv-lvl = 1
+            }
+          }
+          user = $enab15$ {
+            login = cleartext admin123
+          }
+          user = tacadmin {
+            login = cleartext admin123
+            member = netadmin
+          }
+          user = tacoper {
+            login = cleartext oper123
+            member = netoper
+          }
+          user = george {
+              login = cleartext geopwd
+              member = netadmin
+          }
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 192.168.1.254/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.1.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          #exit 0
+          /bin/sh
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: TACACS+
+    node_definition: tacplus
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -719
+    y: -292
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: radiusd.conf
+        content: |-
+          # Basic freeRADIUS onfiguration
+          #
+          # This is what's included in the new container image for 2.9.1
+          # It's basically the stripped down version of the radiusd.conf that
+          # ships with the freeRADIUS distribution minus all the comments. Also:
+          # - no clients.conf dir inclusion (a wildcard client is defined below, note
+          #   the shared secret)
+          # - a few more lines/sections have been commented out that were found to not
+          #   be required for very basic RADIUS testing.
+          #
+          # NOTE it should be possible to successfully use this radiusd.conf with the
+          #      container image that ships with CML 2.9.0
+
+          prefix = /usr
+          exec_prefix = /usr
+          sysconfdir = /etc
+          localstatedir = /var
+          sbindir = ${exec_prefix}/sbin
+          logdir = /var/log/freeradius
+          raddbdir = /etc/freeradius/3.0
+          radacctdir = ${logdir}/radacct
+          name = freeradius
+          confdir = ${raddbdir}
+          modconfdir = ${confdir}/mods-config
+          certdir = ${confdir}/certs
+          cadir   = ${confdir}/certs
+          run_dir = ${localstatedir}/run/${name}
+          db_dir = ${raddbdir}
+          libdir = /usr/lib/freeradius
+          pidfile = ${run_dir}/${name}.pid
+          max_request_time = 30
+          cleanup_delay = 5
+          max_requests = 16384
+          hostname_lookups = no
+
+          log {
+              destination = syslog
+              colourise = yes
+              file = ${logdir}/radius.log
+              syslog_facility = daemon
+              stripped_names = no
+              auth = yes
+              auth_reject = yes
+              auth_badpass = yes
+              auth_goodpass = yes
+              msg_denied = "You are already logged in - access denied"
+          }
+
+          checkrad = ${sbindir}/checkrad
+
+          #ENV {
+          #}
+
+          security {
+              user = freerad
+              group = freerad
+              allow_core_dumps = no
+              max_attributes = 200
+              reject_delay = 1
+              status_server = yes
+          }
+
+          proxy_requests = no
+          #$INCLUDE proxy.conf
+
+          #$INCLUDE clients.conf
+          client all-devices {
+              ipaddr = *
+              secret = RadiusPwd
+              require_message_authenticator = no
+              nas_type = cisco
+          }
+
+          thread pool {
+              start_servers = 5
+              max_servers = 32
+              min_spare_servers = 3
+              max_spare_servers = 10
+              max_requests_per_server = 0
+              auto_limit_acct = no
+          }
+
+          modules {
+              $INCLUDE mods-enabled/
+          }
+
+          #instantiate {
+          #}
+
+          policy {
+              $INCLUDE policy.d/
+          }
+
+          $INCLUDE sites-enabled/
+      - name: users
+        content: |+
+          george Cleartext-Password := "geopwd"
+              cisco-avpair = "shell:priv-lvl=15",
+              Reply-Message = "Welcome, George!"
+
+
+          testuser Cleartext-Password := "testpassword"
+              Reply-Message = "Welcome, Test user",
+              cisco-avpair = "shell:priv-lvl=15"
+
+          pui Cleartext-Password := "puipwd"
+              Reply-Message = "Welcome, Pui!",
+              cisco-avpair = "shell:priv-lvl=15"
+
+
+
+
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 192.168.2.254/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.2.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: RADIUS
+    node_definition: radius
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: 118
+    y: -669
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC3
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.3/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: PC3
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -244
+    y: -829
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC4
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+          sudo ip addr add 192.168.2.4/24 dev eth0
+          sudo ip route add default via 192.168.2.1 dev eth0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: PC4
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: 22
+    y: -825
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3508 bytes
+          !
+          ! Last configuration change at 03:08:22 UTC Wed Oct 7 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          service compress-config
+          !
+          hostname SW2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          username george privilege 15 secret 5 $1$Ce9b$FkEs3Gkv1JniZr2n2fwLm.
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login default local
+          aaa authentication login T_LOGIN_ONLY group TACACS_GROUP local
+          aaa authentication login R_LOGIN_ONLY group RADIUS_GROUP local
+          aaa authentication login R_T_LOGIN group RADIUS_GROUP group TACACS_GROUP local
+          aaa authentication login T_R_LOGIN group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization console
+          aaa authorization exec R_EXEC_ONLY group RADIUS_GROUP local
+          aaa authorization exec T_EXEC_ONLY group TACACS_GROUP local
+          aaa authorization exec T_R_EXEC group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization exec R_T_EXEC group RADIUS_GROUP group TACACS_GROUP local
+          aaa accounting exec R_ACCT_ONLY start-stop group RADIUS_GROUP
+          aaa accounting exec T_ACCT_ONLY start-stop group TACACS_GROUP
+          aaa accounting exec R_T_ACCT start-stop group RADIUS_GROUP group RADIUS_GROUP
+          aaa accounting exec T_R_ACCT start-stop group TACACS_GROUP group RADIUS_GROUP
+          aaa accounting commands 15 T_ACCT_COMMANDS start-stop group TACACS_GROUP
+          !
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          !
+          !
+          !
+          !
+          !
+          no ip routing
+          !
+          !
+          !
+          no ip cef
+          no ipv6 cef
+          !
+          !
+          dot1x system-auth-control
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           switchport trunk allowed vlan 1,10,99
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport nonegotiate
+           negotiation auto
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+          !
+          interface GigabitEthernet0/2
+           negotiation auto
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+          !
+          interface GigabitEthernet1/0
+           description CONEXIUNE_PC5_USE_AUTH
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           authentication port-control auto
+           dot1x timeout tx-period 3
+          !
+          interface GigabitEthernet1/1
+           description CONEXIUNE_PC6_MACHINE_AUTH
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           authentication port-control auto
+           dot1x timeout tx-period 3
+          !
+          interface GigabitEthernet1/2
+           negotiation auto
+          !
+          interface GigabitEthernet1/3
+           negotiation auto
+          !
+          interface Vlan99
+           ip address 192.168.92.254 255.255.255.0
+           no ip route-cache
+          !
+          ip default-gateway 192.168.92.1
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          !
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           authorization exec R_EXEC_ONLY
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec R_ACCT_ONLY
+           logging synchronous
+           login authentication R_LOGIN_ONLY
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           authorization exec T_EXEC_ONLY
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec T_ACCT_ONLY
+           logging synchronous
+           login authentication T_LOGIN_ONLY
+           length 0
+           transport input all
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -113
+    y: -668
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet1/0
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet1/1
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet1/2
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet1/3
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+
+          Current configuration : 3211 bytes
+          !
+          ! Last configuration change at 03:07:49 UTC Wed Oct 7 2026 by george
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login default local
+          aaa authentication login T_LOGIN_ONLY group TACACS_GROUP local
+          aaa authentication login R_LOGIN_ONLY group RADIUS_GROUP local
+          aaa authentication login R_T_LOGIN group RADIUS_GROUP group TACACS_GROUP local
+          aaa authentication login T_R_LOGIN group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization console
+          aaa authorization exec R_EXEC_ONLY group RADIUS_GROUP local
+          aaa authorization exec T_EXEC_ONLY group TACACS_GROUP local
+          aaa authorization exec T_R_EXEC group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization exec R_T_EXEC group RADIUS_GROUP group TACACS_GROUP local
+          aaa accounting exec R_ACCT_ONLY start-stop group RADIUS_GROUP
+          aaa accounting exec T_ACCT_ONLY start-stop group TACACS_GROUP
+          aaa accounting exec R_T_ACCT start-stop group RADIUS_GROUP group RADIUS_GROUP
+          aaa accounting exec T_R_ACCT start-stop group TACACS_GROUP group RADIUS_GROUP
+          aaa accounting commands 15 T_ACCT_COMMANDS start-stop group TACACS_GROUP
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip domain name testlab.com
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          username george privilege 15 secret 9 $9$EI7QLNQ0TMvCMf$cSpVh6neo9jk1MAUDdAZVNs4wjIfdt1X.7bxdPlfNJk
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip address 192.168.1.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           ip address 192.168.0.1 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 1.1.1.1
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip ssh version 2
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          banner motd ^C ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           authorization exec T_EXEC_ONLY
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec T_ACCT_ONLY
+           logging synchronous
+           login authentication T_LOGIN_ONLY
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           authorization exec R_EXEC_ONLY
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec R_ACCT_ONLY
+           logging synchronous
+           login authentication R_LOGIN_ONLY
+           length 0
+           transport input all
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -456
+    y: -498
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3397 bytes
+          !
+          ! Last configuration change at 03:07:56 UTC Wed Oct 7 2026 by george
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          aaa new-model
+          !
+          !
+          aaa group server tacacs+ TACACS_GROUP
+           server name TACACS_SERVER
+          !
+          aaa group server radius RADIUS_GROUP
+           server name RADIUS_SERVER
+          !
+          aaa authentication login default local
+          aaa authentication login T_LOGIN_ONLY group TACACS_GROUP local
+          aaa authentication login R_LOGIN_ONLY group RADIUS_GROUP local
+          aaa authentication login R_T_LOGIN group RADIUS_GROUP group TACACS_GROUP local
+          aaa authentication login T_R_LOGIN group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization console
+          aaa authorization exec R_EXEC_ONLY group RADIUS_GROUP local
+          aaa authorization exec T_EXEC_ONLY group TACACS_GROUP local
+          aaa authorization exec T_R_EXEC group TACACS_GROUP group RADIUS_GROUP local
+          aaa authorization exec R_T_EXEC group RADIUS_GROUP group TACACS_GROUP local
+          aaa accounting exec R_ACCT_ONLY start-stop group RADIUS_GROUP
+          aaa accounting exec T_ACCT_ONLY start-stop group TACACS_GROUP
+          aaa accounting exec R_T_ACCT start-stop group RADIUS_GROUP group RADIUS_GROUP
+          aaa accounting exec T_R_ACCT start-stop group TACACS_GROUP group RADIUS_GROUP
+          aaa accounting commands 15 T_ACCT_COMMANDS start-stop group TACACS_GROUP
+          !
+          !
+          !
+          !
+          !
+          aaa session-id common
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          username george privilege 15 secret 9 $9$DGO1/HrA0vWJs9$dqveStYbhh.4g2.taAkdEWQjc0vWmR9JFfncAP3ZHEM
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/0.1
+           description DATA TRAFFIC
+           encapsulation dot1Q 1 native
+           ip address 192.168.2.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/0.2
+           description MANAGEMENT TRAFFIC
+           encapsulation dot1Q 99
+           ip address 192.168.92.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           ip address 192.168.0.2 255.255.255.0
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            router-id 2.2.2.2
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          ipv6 ioam timestamp
+          !
+          !
+          tacacs server TACACS_SERVER
+           address ipv4 192.168.1.254
+           key TacacsPwd
+          !
+          !
+          radius server RADIUS_SERVER
+           address ipv4 192.168.2.254 auth-port 1812 acct-port 1813
+           key RadiusPwd
+          !
+          !
+          control-plane
+          !
+          banner exec ^C ^C
+          banner incoming ^C ^C
+          banner login ^C ^C
+          banner motd ^C ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           authorization exec T_R_EXEC
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec T_R_ACCT
+           logging synchronous
+           login authentication T_R_LOGIN
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           authorization exec R_T_EXEC
+           accounting commands 15 T_ACCT_COMMANDS
+           accounting exec R_T_ACCT
+           login authentication R_T_LOGIN
+           length 0
+           transport input all
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -116
+    y: -499
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n0
+    n2: n3
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/1<->TACACS+-eth0
+  - id: l1
+    n1: n0
+    n2: n1
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/2<->PC1-eth0
+  - id: l2
+    n1: n0
+    n2: n2
+    i1: i4
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/3<->PC2-eth0
+  - id: l3
+    n1: n7
+    n2: n4
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/1<->RADIUS-eth0
+  - id: l4
+    n1: n7
+    n2: n5
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/2<->PC3-eth0
+  - id: l5
+    n1: n7
+    n2: n6
+    i1: i4
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/3<->PC4-eth0
+  - id: l6
+    n1: n8
+    n2: n0
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
+  - id: l7
+    n1: n9
+    n2: n7
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R2-GigabitEthernet0/0<->SW2-GigabitEthernet0/0
+  - id: l8
+    n1: n8
+    n2: n9
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: R1-GigabitEthernet0/1<->R2-GigabitEthernet0/1
+lab:
+  description: |-
+    RADIUS - Remote Authentication Dial-In User Service
+    TACACS+ - Terminal Access Controller Access-Control System Plus
+  notes: ''
+  title: '3.1 Trouble shooting device security using IOS AAA '
+  node_staging:
+    enabled: false
+    start_remaining: true
+    abort_on_failure: false
+  version: 0.3.1
