@@ -258,7 +258,7 @@ annotations:
     color: '#0A0909'
     rotation: 0
     text_bold: true
-    text_content: 192.168.300.254 - VLAN 300
+    text_content: 192.168.30.254 - VLAN 30
     text_font: monospace
     text_italic: false
     text_size: 12
@@ -586,9 +586,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2175 bytes
+          Current configuration : 2667 bytes
           !
-          ! Last configuration change at 18:56:58 UTC Wed Oct 14 2026
+          ! Last configuration change at 00:33:22 UTC Thu Oct 15 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -600,6 +600,14 @@ nodes:
           boot-start-marker
           boot-end-marker
           !
+          !
+          vrf definition MGMT_VRF
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
           !
           no logging console
           !
@@ -668,7 +676,10 @@ nodes:
           !
           interface GigabitEthernet0/1.10
            encapsulation dot1Q 10
+           vrf forwarding MGMT_VRF
            ip address 192.168.10.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 0
           !
           interface GigabitEthernet0/2
            no ip address
@@ -684,7 +695,10 @@ nodes:
           !
           interface GigabitEthernet0/2.120
            encapsulation dot1Q 120
+           vrf forwarding MGMT_VRF
            ip address 192.168.120.1 255.255.255.252
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
           !
           interface GigabitEthernet0/3
            no ip address
@@ -700,7 +714,10 @@ nodes:
           !
           interface GigabitEthernet0/3.30
            encapsulation dot1Q 30
+           vrf forwarding MGMT_VRF
            ip address 192.168.30.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 0
           !
           router ospfv3 110
            !
@@ -713,6 +730,14 @@ nodes:
           router ospfv3 100
            !
            address-family ipv4 unicast
+           exit-address-family
+          !
+          router ospfv3 120
+           !
+           address-family ipv4 unicast vrf MGMT_VRF
+            passive-interface GigabitEthernet0/1.10
+            passive-interface GigabitEthernet0/3.30
+            router-id 1.1.1.1
            exit-address-family
           !
           ip forward-protocol nd
@@ -795,9 +820,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1832 bytes
+          Current configuration : 2220 bytes
           !
-          ! Last configuration change at 18:57:10 UTC Wed Oct 14 2026
+          ! Last configuration change at 00:33:45 UTC Thu Oct 15 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -809,6 +834,14 @@ nodes:
           boot-start-marker
           boot-end-marker
           !
+          !
+          vrf definition MGMT_VRF
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
           !
           no logging console
           !
@@ -871,7 +904,10 @@ nodes:
           !
           interface GigabitEthernet0/0.20
            encapsulation dot1Q 20
+           vrf forwarding MGMT_VRF
            ip address 192.168.20.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
           !
           interface GigabitEthernet0/1
            no ip address
@@ -889,11 +925,13 @@ nodes:
            encapsulation dot1Q 1 native
            ip address 192.168.12.2 255.255.255.252
            ipv6 enable
-           ospfv3 110 ipv4 area 1
           !
           interface GigabitEthernet0/2.120
            encapsulation dot1Q 120
-           ip address 192.168.120.2 255.255.255.0
+           vrf forwarding MGMT_VRF
+           ip address 192.168.120.2 255.255.255.252
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
           !
           interface GigabitEthernet0/3
            no ip address
@@ -907,6 +945,14 @@ nodes:
            address-family ipv4 unicast
             passive-interface GigabitEthernet0/0.1
             router-id 2.2.2.2
+           exit-address-family
+          !
+          router ospfv3 120
+           !
+           address-family ipv4 unicast vrf MGMT_VRF
+            passive-interface GigabitEthernet0/0.20
+            router-id 2.2.2.2
+            capability vrf-lite
            exit-address-family
           !
           ip forward-protocol nd
@@ -991,7 +1037,7 @@ nodes:
 
           Current configuration : 1552 bytes
           !
-          ! Last configuration change at 18:57:15 UTC Wed Oct 14 2026
+          ! Last configuration change at 00:33:49 UTC Thu Oct 15 2026
           !
           version 15.2
           service timestamps debug datetime msec
@@ -1176,13 +1222,13 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1265 bytes
+          Current configuration : 1301 bytes
           !
-          ! Last configuration change at 18:57:33 UTC Wed Oct 14 2026
+          ! Last configuration change at 00:34:08 UTC Thu Oct 15 2026
           !
           version 15.2
           service timestamps debug datetime msec
-          service timestamps log datetime msec
+          service timestamps log datetime show-timezone
           no service password-encryption
           service compress-config
           !
@@ -1245,7 +1291,6 @@ nodes:
           interface Vlan20
            ip address 192.168.20.254 255.255.255.0
           !
-          ip default-gateway 192.168.2.1
           ip forward-protocol nd
           !
           ip http server
@@ -1255,6 +1300,8 @@ nodes:
           ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           !
           !
+          logging source-interface Vlan20
+          logging host 192.168.10.4
           !
           !
           !
@@ -1329,7 +1376,7 @@ nodes:
 
           Current configuration : 1282 bytes
           !
-          ! Last configuration change at 18:57:43 UTC Wed Oct 14 2026
+          ! Last configuration change at 00:34:17 UTC Thu Oct 15 2026
           !
           version 15.2
           service timestamps debug datetime msec
