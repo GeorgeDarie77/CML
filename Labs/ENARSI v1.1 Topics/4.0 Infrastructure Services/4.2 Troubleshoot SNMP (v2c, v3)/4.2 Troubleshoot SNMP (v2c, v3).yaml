@@ -190,8 +190,8 @@ annotations:
     text_unit: pt
     thickness: 1
     type: text
-    x1: -923.4447844845067
-    y1: -49.88732995479873
+    x1: -921.4402953120119
+    y1: -32.84917198859246
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -221,7 +221,7 @@ annotations:
     thickness: 1
     type: text
     x1: -714.1673444636066
-    y1: -51.4202608770709
+    y1: -31.37536915212237
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -529,66 +529,13 @@ nodes:
         slot: 3
   - boot_disk_size: null
     configuration:
-      - name: boot.sh
-        content: |-
-          # insert more commands here
-          ip address add dev eth0 192.168.10.3/24
-          ip link set dev eth1 up
-          ip route add default via 192.168.10.1 dev eth0
-          #
-          # keep the next line to indicate that the machine is ready
-          echo "READY" >/dev/console
-          exit 0
-    cpu_limit: null
-    cpus: null
-    data_volume: null
-    hide_links: false
-    id: n2
-    image_definition: null
-    label: SysLogServer
-    node_definition: syslog
-    parameters: {}
-    priority: null
-    pyats:
-      username: null
-      password: null
-      enable_password: null
-    ram: null
-    tags:
-      - OSPF area 0
-      - VLAN100
-    x: -873
-    y: -104
-    interfaces:
-      - id: i0
-        label: eth0
-        mac_address: null
-        type: physical
-        slot: 0
-      - id: i1
-        label: eth1
-        mac_address: null
-        type: physical
-        slot: 1
-      - id: i2
-        label: eth2
-        mac_address: null
-        type: physical
-        slot: 2
-      - id: i3
-        label: eth3
-        mac_address: null
-        type: physical
-        slot: 3
-  - boot_disk_size: null
-    configuration:
       - name: ios_config.txt
         content: |-
           Building configuration...
 
-          Current configuration : 2667 bytes
+          Current configuration : 2721 bytes
           !
-          ! Last configuration change at 00:33:22 UTC Thu Oct 15 2026
+          ! Last configuration change at 11:07:23 UTC Sun Oct 18 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -727,11 +674,6 @@ nodes:
             router-id 1.1.1.1
            exit-address-family
           !
-          router ospfv3 100
-           !
-           address-family ipv4 unicast
-           exit-address-family
-          !
           router ospfv3 120
            !
            address-family ipv4 unicast vrf MGMT_VRF
@@ -746,16 +688,19 @@ nodes:
           no ip http server
           no ip http secure-server
           !
+          logging trap debugging
+          logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
+          logging host 192.168.10.3 vrf MGMT_VRF
           ipv6 ioam timestamp
           !
           !
           !
           control-plane
           !
-          banner exec ^CC ^C
-          banner incoming ^CC ^C
-          banner login ^CC ^C
-          banner motd ^CC ^C
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -774,7 +719,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n3
+    id: n2
     image_definition: null
     label: CE
     node_definition: iosv
@@ -820,13 +765,13 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2220 bytes
+          Current configuration : 2375 bytes
           !
-          ! Last configuration change at 00:33:45 UTC Thu Oct 15 2026
+          ! Last configuration change at 11:07:40 UTC Sun Oct 18 2026
           !
           version 15.9
-          service timestamps debug datetime msec
-          service timestamps log datetime msec
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
           no service password-encryption
           !
           hostname R1
@@ -961,16 +906,19 @@ nodes:
           no ip http server
           no ip http secure-server
           !
+          logging trap debugging
+          logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
+          logging host 192.168.10.3 vrf MGMT_VRF
           ipv6 ioam timestamp
           !
           !
           !
           control-plane
           !
-          banner exec ^CC ^C
-          banner incoming ^CC ^C
-          banner login ^CC ^C
-          banner motd ^CC ^C
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -989,7 +937,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n4
+    id: n3
     image_definition: null
     label: R1
     node_definition: iosv
@@ -1035,13 +983,13 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1552 bytes
+          Current configuration : 1697 bytes
           !
-          ! Last configuration change at 00:33:49 UTC Thu Oct 15 2026
+          ! Last configuration change at 11:06:34 UTC Sun Oct 18 2026
           !
           version 15.2
-          service timestamps debug datetime msec
-          service timestamps log datetime msec
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
           no service password-encryption
           service compress-config
           !
@@ -1121,6 +1069,7 @@ nodes:
            description MANAGEMENT
            ip address 192.168.10.254 255.255.255.0
           !
+          ip default-gateway 192.168.10.1
           ip forward-protocol nd
           !
           ip http server
@@ -1130,16 +1079,19 @@ nodes:
           ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           !
           !
+          logging trap debugging
+          logging source-interface Vlan10
+          logging host 192.168.10.3
           !
           !
           !
           !
           control-plane
           !
-          banner exec ^C ^C
-          banner incoming ^C ^C
-          banner login ^C ^C
-          banner motd ^C ^C
+          banner exec ^CC ^C
+          banner incoming ^CC ^C
+          banner login ^CC ^C
+          banner motd ^CC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -1156,7 +1108,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n5
+    id: n4
     image_definition: null
     label: SW3
     node_definition: iosvl2
@@ -1222,13 +1174,13 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1301 bytes
+          Current configuration : 1513 bytes
           !
-          ! Last configuration change at 00:34:08 UTC Thu Oct 15 2026
+          ! Last configuration change at 11:06:37 UTC Sun Oct 18 2026
           !
           version 15.2
-          service timestamps debug datetime msec
-          service timestamps log datetime show-timezone
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
           no service password-encryption
           service compress-config
           !
@@ -1291,6 +1243,19 @@ nodes:
           interface Vlan20
            ip address 192.168.20.254 255.255.255.0
           !
+          interface Vlan33
+           no ip address
+           shutdown
+          !
+          interface Vlan177
+           no ip address
+           shutdown
+          !
+          interface Vlan200
+           no ip address
+           shutdown
+          !
+          ip default-gateway 192.168.20.1
           ip forward-protocol nd
           !
           ip http server
@@ -1300,18 +1265,19 @@ nodes:
           ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           !
           !
+          logging trap debugging
           logging source-interface Vlan20
-          logging host 192.168.10.4
+          logging host 192.168.10.3
           !
           !
           !
           !
           control-plane
           !
-          banner exec ^CC ^C
-          banner incoming ^CC ^C
-          banner login ^CC ^C
-          banner motd ^CC ^C
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -1328,7 +1294,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n6
+    id: n5
     image_definition: null
     label: SW1
     node_definition: iosvl2
@@ -1374,13 +1340,13 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1282 bytes
+          Current configuration : 1394 bytes
           !
-          ! Last configuration change at 00:34:17 UTC Thu Oct 15 2026
+          ! Last configuration change at 11:06:49 UTC Sun Oct 18 2026
           !
           version 15.2
-          service timestamps debug datetime msec
-          service timestamps log datetime msec
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
           no service password-encryption
           service compress-config
           !
@@ -1398,10 +1364,11 @@ nodes:
           !
           !
           !
+          no ip routing
           !
           !
           !
-          ip cef
+          no ip cef
           no ipv6 cef
           !
           !
@@ -1441,12 +1408,9 @@ nodes:
           !
           interface Vlan30
            ip address 192.168.30.254 255.255.255.0
+           no ip route-cache
           !
-          interface Vlan300
-           description MANAGEMENT
-           no ip address
-           shutdown
-          !
+          ip default-gateway 192.168.30.1
           ip forward-protocol nd
           !
           ip http server
@@ -1456,16 +1420,19 @@ nodes:
           ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           !
           !
+          logging trap debugging
+          logging source-interface Vlan30
+          logging host 192.168.10.3
           !
           !
           !
           !
           control-plane
           !
-          banner exec ^C ^C
-          banner incoming ^C ^C
-          banner login ^C ^C
-          banner motd ^C ^C
+          banner exec ^CC ^C
+          banner incoming ^CC ^C
+          banner login ^CC ^C
+          banner motd ^CC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -1482,7 +1449,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n7
+    id: n6
     image_definition: null
     label: SW2
     node_definition: iosvl2
@@ -1538,7 +1505,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n8
+    id: n7
     image_definition: null
     label: PCData1
     node_definition: desktop
@@ -1575,7 +1542,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n9
+    id: n8
     image_definition: null
     label: PCMGMT1
     node_definition: desktop
@@ -1612,7 +1579,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n10
+    id: n9
     image_definition: null
     label: PCData3
     node_definition: desktop
@@ -1649,7 +1616,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n11
+    id: n10
     image_definition: null
     label: PCMGMT3
     node_definition: desktop
@@ -1687,7 +1654,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n12
+    id: n11
     image_definition: null
     label: PCData2
     node_definition: desktop
@@ -1724,7 +1691,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n13
+    id: n12
     image_definition: null
     label: PCMGMT2
     node_definition: desktop
@@ -1746,98 +1713,151 @@ nodes:
         mac_address: null
         type: physical
         slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 192.168.10.3/24
+          ip link set dev eth0 up
+          ip route add default via 192.168.10.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n13
+    image_definition: null
+    label: SysLog
+    node_definition: syslog
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+      - VLAN100
+    x: -870
+    y: -105
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
 links:
   - id: l0
-    n1: n3
+    n1: n2
     n2: n0
     i1: i1
     i2: i0
     conditioning: {}
     label: CE-GigabitEthernet0/0<->Internet-port
   - id: l1
-    n1: n3
-    n2: n5
+    n1: n2
+    n2: n4
     i1: i2
     i2: i1
     conditioning: {}
-    label: CE-GigabitEthernet0/1<->iosvl2-0-GigabitEthernet0/0
+    label: CE-GigabitEthernet0/1<->SW3-GigabitEthernet0/0
   - id: l2
-    n1: n5
+    n1: n4
     n2: n1
     i1: i2
     i2: i0
     conditioning: {}
-    label: iosvl2-0-GigabitEthernet0/1<->NetTools-eth0
+    label: SW3-GigabitEthernet0/1<->NetTools-eth0
   - id: l3
-    n1: n5
-    n2: n2
-    i1: i3
-    i2: i0
-    conditioning: {}
-    label: iosvl2-0-GigabitEthernet0/2<->SysLogServer-eth0
-  - id: l4
-    n1: n3
-    n2: n4
+    n1: n2
+    n2: n3
     i1: i3
     i2: i3
     conditioning: {}
     label: CE-GigabitEthernet0/2<->R1-GigabitEthernet0/2
-  - id: l5
-    n1: n4
-    n2: n6
+  - id: l4
+    n1: n3
+    n2: n5
     i1: i1
     i2: i1
     conditioning: {}
     label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
-  - id: l6
-    n1: n3
-    n2: n7
+  - id: l5
+    n1: n2
+    n2: n6
     i1: i4
     i2: i1
     conditioning: {}
     label: CE-GigabitEthernet0/3<->SW2-GigabitEthernet0/0
-  - id: l7
-    n1: n8
-    n2: n6
+  - id: l6
+    n1: n7
+    n2: n5
     i1: i0
     i2: i2
     conditioning: {}
-    label: desktop-0-eth0<->SW1-GigabitEthernet0/1
-  - id: l8
-    n1: n5
-    n2: n10
+    label: PCData1-eth0<->SW1-GigabitEthernet0/1
+  - id: l7
+    n1: n4
+    n2: n9
     i1: i4
     i2: i0
     conditioning: {}
-    label: SW3-GigabitEthernet0/3<->desktop-1-eth0
-  - id: l9
-    n1: n5
-    n2: n11
+    label: SW3-GigabitEthernet0/3<->PCData3-eth0
+  - id: l8
+    n1: n4
+    n2: n10
     i1: i5
     i2: i0
     conditioning: {}
-    label: SW3-GigabitEthernet1/0<->desktop-2-eth0
-  - id: l10
-    n1: n7
-    n2: n12
+    label: SW3-GigabitEthernet1/0<->PCMGMT3-eth0
+  - id: l9
+    n1: n6
+    n2: n11
     i1: i2
     i2: i0
     conditioning: {}
-    label: SW2-GigabitEthernet0/1<->desktop-3-eth0
+    label: SW2-GigabitEthernet0/1<->PCData2-eth0
+  - id: l10
+    n1: n6
+    n2: n12
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/2<->PCMGMT2-eth0
   - id: l11
-    n1: n7
+    n1: n5
+    n2: n8
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/2<->PCMGMT1-eth0
+  - id: l12
+    n1: n4
     n2: n13
     i1: i3
     i2: i0
     conditioning: {}
-    label: SW2-GigabitEthernet0/2<->desktop-4-eth0
-  - id: l12
-    n1: n6
-    n2: n9
-    i1: i3
-    i2: i0
-    conditioning: {}
-    label: SW1-GigabitEthernet0/2<->desktop-0-eth0
+    label: SW3-GigabitEthernet0/2<->syslog-0-eth0
 lab:
   description: |-
     ENARSI 300-401 v1.2 - Topic: 4.2 Troubleshoot SNMP (v2c, v3)
