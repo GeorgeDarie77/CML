@@ -1,0 +1,2044 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      172.16.2.0/24 - data
+      172.16.20.0/24 - management
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -88.5772469173103
+    y1: -8.143621212521044
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      172.16.12.0/30 - data
+      172.16.120.0/30 - Management
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -419.2689229244053
+    y1: -490.872235552564
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 319
+    text_bold: true
+    text_content: |-
+      172.16.1.0/24 - data
+      172.16.10.0/24 - Management
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -951.3389041597175
+    y1: -337.8645527995448
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SV1 G0/0.0   > 172.16.2.1
+      SV2 G0/0.20 > 172.16.20.1 - VLAN 20
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 145.34360219140237
+    y1: -440.39656439693886
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 62
+    text_bold: true
+    text_content: |-
+      172.16.3.0/24 - data
+      172.16.30.0/24 - Management
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -559.9689784484109
+    y1: -300.0762429692939
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.20.254 - VLAN 200
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 166.46585853777262
+    y1: -266.7421393292409
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.20.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 137.7508716385608
+    y1: -29.65849558534679
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.2.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -189.23246498800003
+    y1: -38.74062908478414
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      .2
+      .2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -56.08195157426521
+    y1: -460.6886622524514
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      .1
+      .1
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -510.67883529936285
+    y1: -459.199259305856
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.10.4
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1035.4288135870534
+    y1: -49.48812994826745
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.10.3
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -921.4402953120119
+    y1: -32.84917198859246
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.10.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -818.0715335648471
+    y1: -49.5519990521203
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.1.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -714.1673444636066
+    y1: -31.37536915212237
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.3.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -586.7864030567804
+    y1: -48.64064954707678
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.30.2
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -468.8978898914332
+    y1: -49.28053725329475
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.30.254 - VLAN 30
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -414.94729065359934
+    y1: -326.6383429817546
+    z_index: 0
+  - border_color: '#808080FF'
+    border_style: ''
+    color: '#FFFFFFFF'
+    line_end: null
+    line_start: null
+    thickness: 1
+    type: line
+    x1: -414.57440818908043
+    y1: -320.2638515957038
+    x2: -496.84187002056234
+    y2: -300.431517047043
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.10.254 - VLAN 10
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1099.9292980435337
+    y1: -338.7900375356404
+    z_index: 0
+  - border_color: '#808080FF'
+    border_style: ''
+    color: '#FFFFFFFF'
+    line_end: null
+    line_start: null
+    thickness: 1
+    type: line
+    x1: -868.5145100806501
+    y1: -333.4854079614777
+    x2: -777.4326773386523
+    y2: -307.7768261391396
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SVI1 G0/1.1   > 172.16.1.1
+      SVI2 G0/1.10 > 172.16.10.1 - VLAN 10
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -992.8439761808918
+    y1: -558.3207098770154
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SVI1 G0/3.1   > 172.16.3.1
+      SVI2 G0/3.30  > 172.16.30.1 - VLAN 30
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -993.9777070966323
+    y1: -503.63009169282236
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SVI1 G0/2.12  > 172.16.12.1
+      SVI2 G0/2.120 > 172.16.120.1 - VLAN 120
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -566.4807179366111
+    y1: -552.8436626098693
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0A0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SVI1 G0/2.12  > 172.16.12.2
+      SVI2 G0/2.120 > 172.16.120.2 - VLAN 120
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -54.17734331480004
+    y1: -547.3666153427234
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 'MAC: 52:54:00:b0:2f:1c'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 244.91787685521035
+    y1: -99.0654139698981
+    z_index: 3
+smart_annotations:
+  - tag: OSPF area 0
+    is_on: true
+    padding: 35
+    label: OSPF area 0
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#E5A18491'
+    border_color: '#00000080'
+    z_index: 2
+  - tag: OSPF area 1
+    is_on: true
+    padding: 35
+    label: OSPF area 1
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#005C9980'
+    border_color: '#00000080'
+    z_index: -5
+  - tag: VLAN100
+    is_on: true
+    padding: 35
+    label: VLAN100
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#E6EA7B80'
+    border_color: '#ECE0A1BF'
+    z_index: 4
+  - tag: VLAN300
+    is_on: true
+    padding: 35
+    label: VLAN300
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#EF6DDE80'
+    border_color: '#D9181899'
+    z_index: 3
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: default
+        content: System Bridge
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: Internet data
+    node_definition: external_connector
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -680
+    y: -720
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 172.16.10.4/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.10.1 dev eth0
+          hostname NetTools
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          cat /etc/motd
+          exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: NetTools
+    node_definition: net-tools
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+      - VLAN100
+    x: -982
+    y: -106
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 3312 bytes
+          !
+          ! Last configuration change at 08:09:07 UTC Tue Oct 27 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname CE
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition MGMT_VRF
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           ip address dhcp
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1.1
+           encapsulation dot1Q 1 native
+           ip address 172.16.1.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/1.10
+           encapsulation dot1Q 10
+           vrf forwarding MGMT_VRF
+           ip address 172.16.10.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 0
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2.1
+           encapsulation dot1Q 1 native
+           ip address 172.16.12.1 255.255.255.252
+           ipv6 enable
+           ospfv3 110 ipv4 area 1
+          !
+          interface GigabitEthernet0/2.120
+           encapsulation dot1Q 120
+           vrf forwarding MGMT_VRF
+           ip address 172.16.120.1 255.255.255.252
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3.1
+           encapsulation dot1Q 1 native
+           ip address 172.16.3.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 0
+          !
+          interface GigabitEthernet0/3.30
+           encapsulation dot1Q 30
+           vrf forwarding MGMT_VRF
+           ip address 172.16.30.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 0
+          !
+          interface GigabitEthernet0/4
+           vrf forwarding MGMT_VRF
+           ip address dhcp
+           duplex auto
+           speed auto
+           media-type rj45
+           ipv6 enable
+           ospfv3 120 ipv4 area 0
+          !
+          interface GigabitEthernet0/5
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/6
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/7
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            passive-interface GigabitEthernet0/0
+            passive-interface GigabitEthernet0/1.1
+            passive-interface GigabitEthernet0/3.1
+            router-id 1.1.1.1
+           exit-address-family
+          !
+          router ospfv3 120
+           !
+           address-family ipv4 unicast vrf MGMT_VRF
+            passive-interface GigabitEthernet0/1.10
+            passive-interface GigabitEthernet0/3.30
+            passive-interface GigabitEthernet0/4
+            router-id 3.3.3.3
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip dns view vrf MGMT_VRF default
+          !
+          logging trap debugging
+          logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
+          logging host 172.16.10.3 vrf MGMT_VRF
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCCC ^C
+          banner incoming ^CCCC ^C
+          banner login ^CCCC ^C
+          banner motd ^CCCC ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: CE
+    node_definition: iosv
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+    x: -600
+    y: -440
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet0/4
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet0/5
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet0/6
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet0/7
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2398 bytes
+          !
+          ! Last configuration change at 08:09:23 UTC Tue Oct 27 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
+          no service password-encryption
+          !
+          hostname R1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          vrf definition MGMT_VRF
+           !
+           address-family ipv4
+           exit-address-family
+           !
+           address-family ipv6
+           exit-address-family
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          ipv6 unicast-routing
+          ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/0.1
+           encapsulation dot1Q 1 native
+           ip address 172.16.2.1 255.255.255.0
+           ipv6 enable
+           ospfv3 110 ipv4 area 1
+          !
+          interface GigabitEthernet0/0.20
+           encapsulation dot1Q 20
+           vrf forwarding MGMT_VRF
+           ip address 172.16.20.1 255.255.255.0
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
+          !
+          interface GigabitEthernet0/1
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           no ip address
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2.1
+           encapsulation dot1Q 1 native
+           ip address 172.16.12.2 255.255.255.252
+           ipv6 enable
+           ospfv3 110 ipv4 area 1
+          !
+          interface GigabitEthernet0/2.120
+           encapsulation dot1Q 120
+           vrf forwarding MGMT_VRF
+           ip address 172.16.120.2 255.255.255.252
+           ipv6 enable
+           ospfv3 120 ipv4 area 1
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          router ospfv3 110
+           !
+           address-family ipv4 unicast
+            passive-interface GigabitEthernet0/0.1
+            router-id 2.2.2.2
+           exit-address-family
+          !
+          router ospfv3 120
+           !
+           address-family ipv4 unicast vrf MGMT_VRF
+            passive-interface GigabitEthernet0/0.20
+            router-id 4.4.4.4
+            capability vrf-lite
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          !
+          logging trap debugging
+          logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
+          logging host 172.16.10.3 vrf MGMT_VRF
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCCC ^C
+          banner incoming ^CCCC ^C
+          banner login ^CCCC ^C
+          banner motd ^CCCC ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 1
+    x: 49
+    y: -440
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1932 bytes
+          !
+          ! Last configuration change at 08:09:29 UTC Tue Oct 27 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
+          no service password-encryption
+          service compress-config
+          !
+          hostname SW3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          no process cpu extended history
+          no process cpu autoprofile hog
+          !
+          !
+          !
+          !
+          !
+          no ip routing
+          !
+          !
+          !
+          no ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          no cdp run
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/1
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/2
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet1/0
+           switchport access vlan 10
+           switchport mode access
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet1/1
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet1/2
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet1/3
+           negotiation auto
+           no cdp enable
+          !
+          interface Vlan10
+           description MANAGEMENT
+           ip address 172.16.10.254 255.255.255.0
+          !
+          ip default-gateway 172.16.10.1
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          no service-routing capabilities-manager
+          logging trap debugging
+          logging source-interface Vlan10
+          logging host 172.16.10.3
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: SW3
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+    x: -756
+    y: -295
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: GigabitEthernet1/0
+        mac_address: null
+        type: physical
+        slot: 4
+      - id: i6
+        label: GigabitEthernet1/1
+        mac_address: null
+        type: physical
+        slot: 5
+      - id: i7
+        label: GigabitEthernet1/2
+        mac_address: null
+        type: physical
+        slot: 6
+      - id: i8
+        label: GigabitEthernet1/3
+        mac_address: null
+        type: physical
+        slot: 7
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1554 bytes
+          !
+          ! Last configuration change at 08:09:43 UTC Tue Oct 27 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
+          no service password-encryption
+          service compress-config
+          !
+          hostname SW1
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          no process cpu extended history
+          no process cpu autoprofile hog
+          !
+          !
+          !
+          !
+          !
+          no ip routing
+          !
+          !
+          !
+          no ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          no cdp run
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/2
+           switchport access vlan 20
+           switchport mode access
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+           no cdp enable
+          !
+          interface Vlan20
+           ip address 172.16.20.254 255.255.255.0
+          !
+          ip default-gateway 172.16.20.1
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          no service-routing capabilities-manager
+          logging trap debugging
+          logging source-interface Vlan20
+          logging host 172.16.10.3
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCCC ^C
+          banner incoming ^CCCC ^C
+          banner login ^CCCC ^C
+          banner motd ^CCCC ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 1
+    x: 44
+    y: -261
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1569 bytes
+          !
+          ! Last configuration change at 08:10:00 UTC Tue Oct 27 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec show-timezone
+          service timestamps log datetime msec show-timezone
+          no service password-encryption
+          service compress-config
+          !
+          hostname SW2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          no process cpu extended history
+          no process cpu autoprofile hog
+          !
+          !
+          !
+          !
+          !
+          no ip routing
+          !
+          !
+          !
+          no ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          no cdp run
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/2
+           switchport access vlan 30
+           switchport mode access
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+           no cdp enable
+          !
+          interface Vlan30
+           ip address 172.16.30.254 255.255.255.0
+           no ip route-cache
+          !
+          ip default-gateway 172.16.30.1
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          no service-routing capabilities-manager
+          logging trap debugging
+          logging source-interface Vlan30
+          logging host 172.16.10.3
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCC ^C
+          banner incoming ^CCC ^C
+          banner login ^CCC ^C
+          banner motd ^CCC ^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+    x: -515
+    y: -286
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PC1
+          ip address add dev eth0 172.16.2.2/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.2.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PCData1
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 1
+    x: -118
+    y: -88
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PCMGMT1
+          ip address add dev eth0 172.16.20.2/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.20.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: PCMGMT1
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 1
+    x: 185
+    y: -86
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PCData3
+          ip address add dev eth0 172.16.1.2/24
+          ip link set dev eth1 up
+          ip route add default via 172.16.1.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: PCData3
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+    x: -683
+    y: -108
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PCMGMT3
+          ip address add dev eth0 172.16.10.2/24
+          ip link set dev eth1 up
+          ip route add default via 172.16.10.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: null
+    label: PCMGMT3
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+      - VLAN100
+    x: -772
+    y: -106
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PCData2
+          ip address add dev eth0 172.16.3.2/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.3.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: null
+    label: PCData2
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+    x: -567
+    y: -99
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname PCMGMT2
+          ip address add dev eth0 172.16.30.2/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.30.1 dev eth0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n12
+    image_definition: null
+    label: PCMGMT2
+    node_definition: desktop
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+      - VLAN300
+    x: -419
+    y: -95
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: boot.sh
+        content: |-
+          # insert more commands here
+          ip address add dev eth0 172.16.10.3/24
+          ip link set dev eth0 up
+          ip route add default via 172.16.10.1 dev eth0
+          #
+          # keep the next line to indicate that the machine is ready
+          echo "READY" >/dev/console
+          exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n13
+    image_definition: null
+    label: SysLog
+    node_definition: syslog
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - OSPF area 0
+      - VLAN100
+    x: -870
+    y: -105
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: default
+        content: System Bridge
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n14
+    image_definition: null
+    label: Internet Management
+    node_definition: external_connector
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -405
+    y: -705
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        type: physical
+        slot: 0
+links:
+  - id: l0
+    n1: n2
+    n2: n4
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: CE-GigabitEthernet0/1<->SW3-GigabitEthernet0/0
+  - id: l1
+    n1: n4
+    n2: n1
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW3-GigabitEthernet0/1<->NetTools-eth0
+  - id: l2
+    n1: n2
+    n2: n3
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: CE-GigabitEthernet0/2<->R1-GigabitEthernet0/2
+  - id: l3
+    n1: n3
+    n2: n5
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: R1-GigabitEthernet0/0<->SW1-GigabitEthernet0/0
+  - id: l4
+    n1: n2
+    n2: n6
+    i1: i4
+    i2: i1
+    conditioning: {}
+    label: CE-GigabitEthernet0/3<->SW2-GigabitEthernet0/0
+  - id: l5
+    n1: n7
+    n2: n5
+    i1: i0
+    i2: i2
+    conditioning: {}
+    label: PCData1-eth0<->SW1-GigabitEthernet0/1
+  - id: l6
+    n1: n4
+    n2: n9
+    i1: i4
+    i2: i0
+    conditioning: {}
+    label: SW3-GigabitEthernet0/3<->PCData3-eth0
+  - id: l7
+    n1: n4
+    n2: n10
+    i1: i5
+    i2: i0
+    conditioning: {}
+    label: SW3-GigabitEthernet1/0<->PCMGMT3-eth0
+  - id: l8
+    n1: n6
+    n2: n11
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/1<->PCData2-eth0
+  - id: l9
+    n1: n6
+    n2: n12
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW2-GigabitEthernet0/2<->PCMGMT2-eth0
+  - id: l10
+    n1: n5
+    n2: n8
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW1-GigabitEthernet0/2<->PCMGMT1-eth0
+  - id: l11
+    n1: n4
+    n2: n13
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: SW3-GigabitEthernet0/2<->SysLog-eth0
+  - id: l12
+    n1: n0
+    n2: n2
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: Internet data-port<->CE-GigabitEthernet0/0
+  - id: l13
+    n1: n14
+    n2: n2
+    i1: i0
+    i2: i5
+    conditioning: {}
+    label: Internet Management-port<->CE-GigabitEthernet0/4
+lab:
+  description: |-
+    ENARSI 300-401 v1.2 - Topic: 4.2 Troubleshoot SNMP (v2c, v3)
+    Playground for SNMP
+    - v2c
+    - v3
+    Use external connector to connect to an external monitoring tool such as PRTG and also for a different syslog server. Use snmpwalk embedded in the NetTools container to interrogate the node for different OIDs. Use also a syslogserver internal to the topology!
+  notes: |-
+    External connectors connectivity <br>
+    Add to windows machine: <br>
+    route add 172.16.1.0 mask 255.255.255.0 192.168.x.x -dhcp address received by the CE router on G0/0 interface  for data traffic<br>
+    route add 172.16.2.0 mask 255.255.255.0 192.168.x.x <br>
+    route add 172.16.3.0 mask 255.255.255.0 192.168.x.x <br>
+    route add 172.16.12.0 mask 255.255.255.0 192.168.x.x <br>
+
+    route add 172.16.10.0 mask 255.255.255.0 192.168.x.x  - dhcp address received by the CE router on G0/4 interface  for management traffic<br>
+    route add 172.16.30.0 mask 255.255.255.0 192.168.x.x <br>
+    route add 172.16.20.0 mask 255.255.255.0 192.168.x.x <br>
+    route add 172.16.120.0 mask 255.255.255.0 192.168.x.x <br>
+
+    Add these static routes any time you start the lab. They are not persisted. To persist them use -p parameter
+
+    THIS SETTINGS WILL ALLOW EXTRNAL PRGT TOOL TO REACH THE DEVICES FROM CML TOPOLOGY VIA MANAGEMENT CONNECTION
+
+    ========== OTHER USEFUL COMMANDS IN WINDOWS =========
+    Method 1 - Using cmd prompt
+    1. Print routes
+    route print
+
+    To filter for specific routes, you can pipe the output: route print | findstr "10.0.0".
+
+    2. Add a Route
+
+    • Temporary Route (disappears after a reboot):cmd
+    route add 10.0.0.0 mask 255.255.255.0 192.168.1.254
+
+    • Persistent Route (saves to the registry and survives a system reboot):cmd
+    route -p add 10.0.0.0 mask 255.255.255.0 192.168.1.254
+
+    (Syntax: route add [destination_network] mask [subnet_mask] [gateway_ip])
+
+    3. Delete a Route
+
+    To delete a specific static route (removes both temporary and persistent versions):
+    cmd
+    route delete 10.0.0.0 mask 255.255.255.0 192.168.1.254
+
+    • Quick Delete: You can often just specify the destination IP: route delete 10.0.0.0.
+    • Clear All: To clear all non-default static routes from the routing table, use route -f.
+
+    Method 2: Using PowerShell
+
+    If you prefer modern PowerShell cmdlets, you can utilize the Microsoft NetTCPIP Module.
+
+    1. Show Routes
+
+    powershell
+    Get-NetRoute
+
+
+    2. Add a Route
+
+    By default, New-NetRoute creates a persistent route unless you specify the -PolicyStore ActiveStore flag.
+    powershell
+    New-NetRoute -DestinationPrefix "10.0.0.0/24" -NextHop "192.168.1.254" -InterfaceAlias "Ethernet"
+
+
+    3. Delete a Route
+
+    powershell
+    Remove-NetRoute -DestinationPrefix "10.0.0.0/24" -NextHop "192.168.1.254"
+  title: 4.2 Troubleshoot SNMP (v2c, v3) - class B address schema
+  node_staging:
+    enabled: false
+    start_remaining: true
+    abort_on_failure: false
+  version: 0.3.1
