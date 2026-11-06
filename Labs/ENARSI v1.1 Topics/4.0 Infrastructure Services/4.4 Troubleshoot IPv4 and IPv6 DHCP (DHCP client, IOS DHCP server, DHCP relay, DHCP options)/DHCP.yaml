@@ -1,0 +1,189 @@
+lab:
+  description: "Topologie complexa pentru Troubleshooting IPv4/IPv6 DHCP (Client, Server, Relay, Options)"
+  notes: "Destinat pregatirii pentru examenul CCNP/CCIE ENCOR/ENARSI. Include DHCPv4/v6 Stateful, DHCP Options 43/150 si DHCP Relay."
+  title: "CCNP ENARSI - 4.4 DHCP Troubleshooting Lab"
+  version: 1.0.3
+nodes:
+  - id: n1
+    label: HQ-SRV-R1
+    node_definition: iosv
+    x: -300
+    y: 100
+    configuration: |
+      hostname HQ-SRV-R1
+      !
+      ipv6 unicast-routing
+      !
+      ip dhcp excluded-address 192.168.10.1 192.168.10.10
+      ip dhcp excluded-address 192.168.20.1 192.168.20.10
+      ip dhcp excluded-address 192.168.30.1 192.168.30.10
+      !
+      ip dhcp pool HQ-VLAN10
+       network 192.168.10.0 255.255.255.0
+       default-router 192.168.10.1
+       dns-server 8.8.8.8
+       option 43 hex f104c0a80a0a
+      !
+      ip dhcp pool BR-VLAN30
+       network 192.168.30.0 255.255.255.0
+       default-router 192.168.30.1
+       dns-server 1.1.1.1
+       option 150 ip 192.168.10.254
+      !
+      ipv6 dhcp pool IPV6-HQ-VLAN20
+       address prefix 2001:db8:hq:20::/64
+       dns-server 2001:4860:4860::8888
+       domain-name enterprise.local
+      !
+      interface GigabitEthernet0/1
+       description Conexiune spre HQ-CORE-R2
+       ip address 10.1.1.1 255.255.255.252
+       ipv6 address 2001:db8:core:12::1/64
+       ipv6 dhcp server IPV6-HQ-VLAN20
+       no shutdown
+      !
+      ip route 192.168.10.0 255.255.255.0 10.1.1.2
+      ip route 192.168.20.0 255.255.255.0 10.1.1.2
+      ip route 192.168.30.0 255.255.255.0 10.1.1.2
+      ipv6 route 2001:db8:hq:20::/64 2001:db8:core:12::2
+      end
+
+  - id: n2
+    label: HQ-CORE-R2
+    node_definition: iosv
+    x: -100
+    y: 100
+    configuration: |
+      hostname HQ-CORE-R2
+      !
+      ipv6 unicast-routing
+      !
+      interface GigabitEthernet0/1
+       description Conexiune spre HQ-SRV-R1
+       ip address 10.1.1.2 255.255.255.252
+       ipv6 address 2001:db8:core:12::2/64
+       no shutdown
+      !
+      interface GigabitEthernet0/2
+       description Conexiune spre BR-R3 (WAN-ish)
+       ip address 10.2.2.1 255.255.255.252
+       no shutdown
+      !
+      interface GigabitEthernet0/3
+       description Trunk spre HQ Switched Network
+       no shutdown
+      !
+      interface GigabitEthernet0/3.10
+       encapsulation dot1Q 10
+       ip address 192.168.10.1 255.255.255.0
+       ip helper-address 10.1.1.1
+      !
+      interface GigabitEthernet0/3.20
+       encapsulation dot1Q 20
+       ipv6 address 2001:db8:hq:20::1/64
+       ipv6 nd managed-config-flag
+       ipv6 nd other-config-flag
+       ipv6 dhcp relay destination 2001:db8:core:12::1
+      !
+      ip dhcp pool WAN-POOL
+       network 10.2.2.0 255.255.255.252
+       default-router 10.2.2.1
+      !
+      ip route 192.168.30.0 255.255.255.0 10.2.2.2
+      end
+
+  - id: n3
+    label: BR-R3
+    node_definition: iosv
+    x: 150
+    y: 100
+    configuration: |
+      hostname BR-R3
+      !
+      interface GigabitEthernet0/1
+       description Interfata Client WAN
+       ip address dhcp
+       no shutdown
+      !
+      interface GigabitEthernet0/2
+       description Interfata spre BR-SW1
+       ip address 192.168.30.1 255.255.255.0
+       ip helper-address 10.1.1.1
+       no shutdown
+      !
+      ip route 0.0.0.0 0.0.0.0 10.2.2.1
+      end
+
+  - id: n4
+    label: BR-SW1
+    node_definition: iosvl2
+    x: 150
+    y: -50
+    configuration: |
+      hostname BR-SW1
+      !
+      vlan 30
+       name Branch-Data
+      vlan 40
+       name Branch-Mgmt
+      !
+      interface GigabitEthernet0/0
+       description Uplink spre BR-R3
+       switchport mode access
+       switchport access vlan 30
+       no shutdown
+      !
+      interface GigabitEthernet0/1
+       description Client PC1
+       switchport mode access
+       switchport access vlan 30
+       no shutdown
+      !
+      interface vlan 40
+       description Management SVI actionat ca DHCP Client
+       ip address dhcp
+       no shutdown
+      end
+
+  - id: n5
+    label: HQ-PC1
+    node_definition: desktop
+    x: -200
+    y: -100
+
+  - id: n6
+    label: HQ-PC2
+    node_definition: desktop
+    x: -50
+    y: -100
+
+  - id: n7
+    label: BR-PC1
+    node_definition: desktop
+    x: 250
+    y: -150
+
+links:
+  - i1: n1
+    n1: GigabitEthernet0/1
+    i2: n2
+    n2: GigabitEthernet0/1
+  - i1: n2
+    n1: GigabitEthernet0/2
+    i2: n3
+    n2: GigabitEthernet0/1
+  - i1: n2
+    n1: GigabitEthernet0/3
+    i2: n5
+    n2: eth0
+  - i1: n2
+    n1: GigabitEthernet0/3
+    i2: n6
+    n2: eth0
+  - i1: n3
+    n1: GigabitEthernet0/2
+    i2: n4
+    n2: GigabitEthernet0/0
+  - i1: n4
+    n1: GigabitEthernet0/1
+    i2: n7

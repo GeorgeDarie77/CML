@@ -1,0 +1,92 @@
+Overview
+All devices are configured for snmp with different variants.
+
+SW1 - SNMP v2c - classical communities strings
+SW2 - SMMP v2c with group, users and view. User define in fact the communities
+SW3 - SNMP v3 noAuthNoPriv
+R1  - SNMP v3 authNoPriv
+CE  - SNMP v3 authPriv
+
+
+
+There are 2 tools used to test the SNMP functionality
+1. PRTG - external to the LAB, connected via external connector
+	- allow monitoring of the sensors
+	- allow capturing SNMP traps
+	- not used for SET operation
+
+2. NETTools - CML container which contain specific snmp tools
+	-snmpwalk - allow GET operation for a specific OID
+	-snmpset - set a specific OID
+
+Example:
+{*}
+snmpwalk -v2c -c public 172.16.20.254 .1
+	- Will display all the OID supported by the device
+{**}
+snmpset -v2c -c private 172.16.20.254 1.3.6.1.2.1.1.5.0 s "PUI"
+	- allow setting a device name using pure v2c version (no groups, no view, all set by default)
+
+snmpset -v2c -c Parola_NETTOOLS_WR 172.16.30.254 1.3.6.1.2.1.1.5.0 s "PUI"
+	allow setting a device name using v2c version with groups and views
+
+snmpwalk -v 3 -l noAuthNoPriv -u <utilizator> <IP_echipament> [OID]
+snmpwalk -v 3 -l noAuthNoPriv -u NETTOOLS_USER 172.16.10.254 .1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SW1
+       SNMP v2c 
+	   
+	   * clasical usage of the communities
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+snmp-server community public RO
+snmp-server community private RW
+snmp-server enable traps 
+snmp-server host 192.168.109.1 version 2c public
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SW2
+       SNMP v2c with groups and views
+	   
+	  * not an usual use case
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[**] The following configuration is a mix between v2c and v3 version
+[*] There are no user concept in v2c, only the communities
+- the <user Parola_NETTOOLS> plays the role of the community string in v2c version
+- the <access ALLOW_NETTOOLS> is the access list allowing only the NETTools to send requests
+
+snmp-server user Parola_NETTOOLS ADMINS_READ v2c access ALLOW_NETTOOLS
+snmp-server user Parola_NETTOOLS_WR ADMIN_WRITE v2c access ALLOW_NETTOOLS
+snmp-server user Parola_PRTG ADMINS_READ v2c access ALLOW_PRTG
+snmp-server user Parola_PRTG_WR ADMIN_WRITE v2c access ALLOW_PRTG
+
+[**] Create several groups
+To each group there are 3 views that can be associated
+	* read view
+	* write view
+	* notification view
+Only the read view will be associated by default when the read view is not specified when the commands requiers a read view.
+In other words, v1default (read view) is associated automatic to the group if no read view is spcified
+	
+[*] Create a group with the default view {v1default}. There is no write view or notification view
+
+snmp-server group ADMINS_READ v2c
+
+[*] Create a group with the write view {ADMIN_VIEW_WRITE}. The default {v1default} will be for read view
+snmp-server group ADMIN_WRITE v2c write ADMIN_VIEW_WRITE
+
+[*] create a custom view. This has one rule which include the root of MIB
+snmp-server view ADMIN_VIEW_WRITE iso included
+
+[*] allow all traps
+snmp-server enable traps  
+
+[*] specify IP address of the monitoring tool. In this case PRTG
+snmp-server host 192.168.109.1 version 2c private
+snmp-server host 192.168.109.1 version 2c public
+
+
+snmpwalk -v 3 -l noAuthNoPriv -u <utilizator> <IP_echipament> [OID]
