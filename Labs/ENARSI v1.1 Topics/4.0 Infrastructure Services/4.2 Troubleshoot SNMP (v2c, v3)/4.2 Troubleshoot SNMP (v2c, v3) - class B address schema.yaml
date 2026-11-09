@@ -390,6 +390,23 @@ annotations:
     x1: 244.91787685521035
     y1: -99.0654139698981
     z_index: 3
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#EB0909'
+    rotation: 0
+    text_bold: true
+    text_content: |-
+      SNMP v2c
+      Community: public, private
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: 200.0
+    y1: -240.0
+    z_index: 4
 smart_annotations:
   - tag: OSPF area 0
     is_on: true
@@ -533,9 +550,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 3312 bytes
+          Current configuration : 8351 bytes
           !
-          ! Last configuration change at 08:09:07 UTC Tue Oct 27 2026
+          ! Last configuration change at 13:11:29 UTC Fri Nov 6 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -659,12 +676,14 @@ nodes:
            encapsulation dot1Q 1 native
            ip address 172.16.3.1 255.255.255.0
            ipv6 enable
+           snmp trap link-status
            ospfv3 110 ipv4 area 0
           !
           interface GigabitEthernet0/3.30
            encapsulation dot1Q 30
            vrf forwarding MGMT_VRF
            ip address 172.16.30.1 255.255.255.0
+           shutdown
            ipv6 enable
            ospfv3 120 ipv4 area 0
           !
@@ -725,17 +744,129 @@ nodes:
           !
           logging trap debugging
           logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
-          logging host 172.16.10.3 vrf MGMT_VRF
+          logging host 172.16.10.3
           ipv6 ioam timestamp
           !
+          snmp-server group ADMINS_FULL v3 auth read FULL_VIEW write FULL_VIEW
+          snmp-server view FULL_VIEW iso included
+          snmp-server chassis-id
+          snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+          snmp-server enable traps vrrp
+          snmp-server enable traps pfr
+          snmp-server enable traps flowmon
+          snmp-server enable traps tty
+          snmp-server enable traps eigrp
+          snmp-server enable traps ospf state-change
+          snmp-server enable traps ospf errors
+          snmp-server enable traps ospf retransmit
+          snmp-server enable traps ospf lsa
+          snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+          snmp-server enable traps ospf cisco-specific state-change shamlink interface
+          snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+          snmp-server enable traps ospf cisco-specific errors
+          snmp-server enable traps ospf cisco-specific retransmit
+          snmp-server enable traps ospf cisco-specific lsa
+          snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+          snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+          snmp-server enable traps ethernet evc status create delete
+          snmp-server enable traps diameter
+          snmp-server enable traps vrrpv3
+          snmp-server enable traps auth-framework sec-violation auth-fail
+          snmp-server enable traps trustsec-sxp conn-srcaddr-err msg-parse-err conn-config-err binding-err conn-up conn-down binding-expn-fail oper-nodeid-change binding-conflict
+          snmp-server enable traps aaa_server
+          snmp-server enable traps atm subif
+          snmp-server enable traps bfd
+          snmp-server enable traps bgp cbgp2
+          snmp-server enable traps bstun
+          snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+          snmp-server enable traps memory bufferpeak
+          snmp-server enable traps cnpd
+          snmp-server enable traps config-copy
+          snmp-server enable traps config
+          snmp-server enable traps config-ctid
+          snmp-server enable traps dlsw
+          snmp-server enable traps dsp card-status
+          snmp-server enable traps dsp oper-state
+          snmp-server enable traps dsp video-usage
+          snmp-server enable traps dsp video-out-of-resource
+          snmp-server enable traps entity-ext
+          snmp-server enable traps entity
+          snmp-server enable traps fru-ctrl
+          snmp-server enable traps resource-policy
+          snmp-server enable traps frame-relay multilink bundle-mismatch
+          snmp-server enable traps frame-relay
+          snmp-server enable traps frame-relay subif
+          snmp-server enable traps hsrp
+          snmp-server enable traps ipmobile
+          snmp-server enable traps ipmulticast
+          snmp-server enable traps isis
+          snmp-server enable traps mempool
+          snmp-server enable traps mpls traffic-eng
+          snmp-server enable traps mpls fast-reroute protected
+          snmp-server enable traps mpls rfc ldp
+          snmp-server enable traps mpls ldp
+          snmp-server enable traps msdp
+          snmp-server enable traps mvpn
+          snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+          snmp-server enable traps pppoe
+          snmp-server enable traps cpu threshold
+          snmp-server enable traps nhrp nhs
+          snmp-server enable traps nhrp nhc
+          snmp-server enable traps nhrp nhp
+          snmp-server enable traps nhrp quota-exceeded
+          snmp-server enable traps rsvp
+          snmp-server enable traps ipsla
+          snmp-server enable traps stun
+          snmp-server enable traps syslog
+          snmp-server enable traps l2tun session
+          snmp-server enable traps l2tun pseudowire status
+          snmp-server enable traps pw vc
+          snmp-server enable traps waas
+          snmp-server enable traps event-manager
+          snmp-server enable traps lisp
+          snmp-server enable traps firewall serverstatus
+          snmp-server enable traps ospfv3 state-change
+          snmp-server enable traps ospfv3 errors
+          snmp-server enable traps pki
+          snmp-server enable traps gdoi gm-start-registration
+          snmp-server enable traps gdoi gm-registration-complete
+          snmp-server enable traps gdoi gm-re-register
+          snmp-server enable traps gdoi gm-rekey-rcvd
+          snmp-server enable traps gdoi gm-rekey-fail
+          snmp-server enable traps gdoi ks-rekey-pushed
+          snmp-server enable traps gdoi gm-incomplete-cfg
+          snmp-server enable traps gdoi ks-no-rsa-keys
+          snmp-server enable traps gdoi ks-new-registration
+          snmp-server enable traps gdoi ks-reg-complete
+          snmp-server enable traps gdoi ks-role-change
+          snmp-server enable traps gdoi ks-gm-deleted
+          snmp-server enable traps gdoi ks-peer-reachable
+          snmp-server enable traps gdoi ks-peer-unreachable
+          snmp-server enable traps ike policy add
+          snmp-server enable traps ike policy delete
+          snmp-server enable traps ike tunnel start
+          snmp-server enable traps ike tunnel stop
+          snmp-server enable traps ipsec cryptomap add
+          snmp-server enable traps ipsec cryptomap delete
+          snmp-server enable traps ipsec cryptomap attach
+          snmp-server enable traps ipsec cryptomap detach
+          snmp-server enable traps ipsec tunnel start
+          snmp-server enable traps ipsec tunnel stop
+          snmp-server enable traps ipsec too-many-sas
+          snmp-server enable traps ethernet cfm alarm
+          snmp-server enable traps rf
+          snmp-server enable traps bulkstat collection transfer
+          snmp-server enable traps mpls vpn
+          snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+          snmp-server host 192.168.109.1 vrf MGMT_VRF version 3 auth PRTG_USER
           !
           !
           control-plane
           !
-          banner exec ^CCCC ^C
-          banner incoming ^CCCC ^C
-          banner login ^CCCC ^C
-          banner motd ^CCCC ^C
+          banner exec ^CCCCC ^C
+          banner incoming ^CCCCC ^C
+          banner login ^CCCCC ^C
+          banner motd ^CCCCC ^C
           !
           line con 0
            exec-timeout 0 0
@@ -820,9 +951,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 2398 bytes
+          Current configuration : 2492 bytes
           !
-          ! Last configuration change at 08:09:23 UTC Tue Oct 27 2026
+          ! Last configuration change at 13:11:52 UTC Fri Nov 6 2026
           !
           version 15.9
           service timestamps debug datetime msec show-timezone
@@ -961,6 +1092,8 @@ nodes:
           !
           no ip http server
           no ip http secure-server
+          ip route 0.0.0.0 0.0.0.0 192.168.109.130
+          ip route vrf MGMT_VRF 0.0.0.0 0.0.0.0 192.168.109.131
           !
           logging trap debugging
           logging source-interface GigabitEthernet0/2.120 vrf MGMT_VRF
@@ -1039,9 +1172,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1932 bytes
+          Current configuration : 5460 bytes
           !
-          ! Last configuration change at 08:09:29 UTC Tue Oct 27 2026
+          ! Last configuration change at 13:12:00 UTC Fri Nov 6 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
@@ -1153,6 +1286,82 @@ nodes:
           !
           !
           !
+          snmp-server user PRTG_USER ADMIN_NOAUTH_READ v3
+          snmp-server user NETTOOLS_USER ADMIN_NOAUTH_WRITE v3
+          snmp-server group ADMIN_NOAUTH_RW v3 noauth read ADMIN_VIEW write ADMIN_VIEW
+          snmp-server group ADMIN_NOAUTH_READ v3 noauth read ADMIN_VIEW
+          snmp-server group ADMIN_NOAUTH_WRITE v3 noauth write ADMIN_VIEW
+          snmp-server view ADMIN_VIEW iso included
+          snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+          snmp-server enable traps flowmon
+          snmp-server enable traps tty
+          snmp-server enable traps eigrp
+          snmp-server enable traps casa
+          snmp-server enable traps ospf state-change
+          snmp-server enable traps ospf errors
+          snmp-server enable traps ospf retransmit
+          snmp-server enable traps ospf lsa
+          snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+          snmp-server enable traps ospf cisco-specific state-change shamlink interface
+          snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+          snmp-server enable traps ospf cisco-specific errors
+          snmp-server enable traps ospf cisco-specific retransmit
+          snmp-server enable traps ospf cisco-specific lsa
+          snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+          snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+          snmp-server enable traps auth-framework sec-violation
+          snmp-server enable traps energywise
+          snmp-server enable traps pw vc
+          snmp-server enable traps l2tun session
+          snmp-server enable traps l2tun pseudowire status
+          snmp-server enable traps ether-oam
+          snmp-server enable traps lisp
+          snmp-server enable traps mpls rfc ldp
+          snmp-server enable traps mpls ldp
+          snmp-server enable traps mpls rfc traffic-eng
+          snmp-server enable traps mpls traffic-eng
+          snmp-server enable traps ethernet evc status create delete
+          snmp-server enable traps bridge newroot topologychange
+          snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+          snmp-server enable traps vtp
+          snmp-server enable traps vlancreate
+          snmp-server enable traps vlandelete
+          snmp-server enable traps ike policy add
+          snmp-server enable traps ike policy delete
+          snmp-server enable traps ike tunnel start
+          snmp-server enable traps ike tunnel stop
+          snmp-server enable traps ipsec cryptomap add
+          snmp-server enable traps ipsec cryptomap delete
+          snmp-server enable traps ipsec cryptomap attach
+          snmp-server enable traps ipsec cryptomap detach
+          snmp-server enable traps ipsec tunnel start
+          snmp-server enable traps ipsec tunnel stop
+          snmp-server enable traps ipsec too-many-sas
+          snmp-server enable traps bfd
+          snmp-server enable traps bgp cbgp2
+          snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+          snmp-server enable traps dlsw
+          snmp-server enable traps frame-relay
+          snmp-server enable traps frame-relay subif
+          snmp-server enable traps hsrp
+          snmp-server enable traps ipmulticast
+          snmp-server enable traps isis
+          snmp-server enable traps msdp
+          snmp-server enable traps mvpn
+          snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+          snmp-server enable traps rsvp
+          snmp-server enable traps ipsla
+          snmp-server enable traps slb real virtual csrp
+          snmp-server enable traps syslog
+          snmp-server enable traps event-manager
+          snmp-server enable traps pki
+          snmp-server enable traps ospfv3 state-change
+          snmp-server enable traps ospfv3 errors
+          snmp-server enable traps ethernet cfm alarm
+          snmp-server enable traps mpls vpn
+          snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+          snmp-server host 192.168.109.1 NETTOOLS_USER
+          snmp-server host 192.168.109.1 PRTG_USER
           !
           control-plane
           !
@@ -1242,9 +1451,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1554 bytes
+          Current configuration : 4759 bytes
           !
-          ! Last configuration change at 08:09:43 UTC Tue Oct 27 2026
+          ! Last configuration change at 13:12:20 UTC Fri Nov 6 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
@@ -1335,6 +1544,77 @@ nodes:
           !
           !
           !
+          snmp-server community public RO
+          snmp-server community private RW
+          snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+          snmp-server enable traps flowmon
+          snmp-server enable traps tty
+          snmp-server enable traps eigrp
+          snmp-server enable traps casa
+          snmp-server enable traps ospf state-change
+          snmp-server enable traps ospf errors
+          snmp-server enable traps ospf retransmit
+          snmp-server enable traps ospf lsa
+          snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+          snmp-server enable traps ospf cisco-specific state-change shamlink interface
+          snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+          snmp-server enable traps ospf cisco-specific errors
+          snmp-server enable traps ospf cisco-specific retransmit
+          snmp-server enable traps ospf cisco-specific lsa
+          snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+          snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+          snmp-server enable traps auth-framework sec-violation
+          snmp-server enable traps energywise
+          snmp-server enable traps pw vc
+          snmp-server enable traps l2tun session
+          snmp-server enable traps l2tun pseudowire status
+          snmp-server enable traps ether-oam
+          snmp-server enable traps lisp
+          snmp-server enable traps mpls rfc ldp
+          snmp-server enable traps mpls ldp
+          snmp-server enable traps mpls rfc traffic-eng
+          snmp-server enable traps mpls traffic-eng
+          snmp-server enable traps ethernet evc status create delete
+          snmp-server enable traps bridge newroot topologychange
+          snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+          snmp-server enable traps vtp
+          snmp-server enable traps vlancreate
+          snmp-server enable traps vlandelete
+          snmp-server enable traps ike policy add
+          snmp-server enable traps ike policy delete
+          snmp-server enable traps ike tunnel start
+          snmp-server enable traps ike tunnel stop
+          snmp-server enable traps ipsec cryptomap add
+          snmp-server enable traps ipsec cryptomap delete
+          snmp-server enable traps ipsec cryptomap attach
+          snmp-server enable traps ipsec cryptomap detach
+          snmp-server enable traps ipsec tunnel start
+          snmp-server enable traps ipsec tunnel stop
+          snmp-server enable traps ipsec too-many-sas
+          snmp-server enable traps bfd
+          snmp-server enable traps bgp cbgp2
+          snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+          snmp-server enable traps dlsw
+          snmp-server enable traps frame-relay
+          snmp-server enable traps frame-relay subif
+          snmp-server enable traps hsrp
+          snmp-server enable traps ipmulticast
+          snmp-server enable traps isis
+          snmp-server enable traps msdp
+          snmp-server enable traps mvpn
+          snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+          snmp-server enable traps rsvp
+          snmp-server enable traps ipsla
+          snmp-server enable traps slb real virtual csrp
+          snmp-server enable traps syslog
+          snmp-server enable traps event-manager
+          snmp-server enable traps pki
+          snmp-server enable traps ospfv3 state-change
+          snmp-server enable traps ospfv3 errors
+          snmp-server enable traps ethernet cfm alarm
+          snmp-server enable traps mpls vpn
+          snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+          snmp-server host 192.168.109.1 version 2c public
           !
           control-plane
           !
@@ -1404,9 +1684,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1569 bytes
+          Current configuration : 5316 bytes
           !
-          ! Last configuration change at 08:10:00 UTC Tue Oct 27 2026
+          ! Last configuration change at 13:12:35 UTC Fri Nov 6 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
@@ -1490,6 +1770,13 @@ nodes:
           ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
           !
+          ip access-list standard ALLOW_NETTOOLS
+           permit 172.16.10.4
+           deny   any
+          ip access-list standard ALLOW_PRTG
+           permit 192.168.109.1
+           deny   any
+          !
           !
           no service-routing capabilities-manager
           logging trap debugging
@@ -1498,6 +1785,83 @@ nodes:
           !
           !
           !
+          snmp-server user Parola_NETTOOLS ADMINS_READ v2c access ALLOW_NETTOOLS
+          snmp-server user Parola_NETTOOLS_WR ADMIN_WRITE v2c access ALLOW_NETTOOLS
+          snmp-server user Parola_PRTG ADMINS_READ v2c access ALLOW_PRTG
+          snmp-server user Parola_PRTG_WR ADMIN_WRITE v2c access ALLOW_PRTG
+          snmp-server group ADMINS_READ v2c
+          snmp-server group ADMIN_WRITE v2c write ADMIN_VIEW_WRITE
+          snmp-server view ADMIN_VIEW_WRITE iso included
+          snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+          snmp-server enable traps flowmon
+          snmp-server enable traps tty
+          snmp-server enable traps eigrp
+          snmp-server enable traps casa
+          snmp-server enable traps ospf state-change
+          snmp-server enable traps ospf errors
+          snmp-server enable traps ospf retransmit
+          snmp-server enable traps ospf lsa
+          snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+          snmp-server enable traps ospf cisco-specific state-change shamlink interface
+          snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+          snmp-server enable traps ospf cisco-specific errors
+          snmp-server enable traps ospf cisco-specific retransmit
+          snmp-server enable traps ospf cisco-specific lsa
+          snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+          snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+          snmp-server enable traps auth-framework sec-violation
+          snmp-server enable traps energywise
+          snmp-server enable traps pw vc
+          snmp-server enable traps l2tun session
+          snmp-server enable traps l2tun pseudowire status
+          snmp-server enable traps ether-oam
+          snmp-server enable traps lisp
+          snmp-server enable traps mpls rfc ldp
+          snmp-server enable traps mpls ldp
+          snmp-server enable traps mpls rfc traffic-eng
+          snmp-server enable traps mpls traffic-eng
+          snmp-server enable traps ethernet evc status create delete
+          snmp-server enable traps bridge newroot topologychange
+          snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+          snmp-server enable traps vtp
+          snmp-server enable traps vlancreate
+          snmp-server enable traps vlandelete
+          snmp-server enable traps ike policy add
+          snmp-server enable traps ike policy delete
+          snmp-server enable traps ike tunnel start
+          snmp-server enable traps ike tunnel stop
+          snmp-server enable traps ipsec cryptomap add
+          snmp-server enable traps ipsec cryptomap delete
+          snmp-server enable traps ipsec cryptomap attach
+          snmp-server enable traps ipsec cryptomap detach
+          snmp-server enable traps ipsec tunnel start
+          snmp-server enable traps ipsec tunnel stop
+          snmp-server enable traps ipsec too-many-sas
+          snmp-server enable traps bfd
+          snmp-server enable traps bgp cbgp2
+          snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+          snmp-server enable traps dlsw
+          snmp-server enable traps frame-relay
+          snmp-server enable traps frame-relay subif
+          snmp-server enable traps hsrp
+          snmp-server enable traps ipmulticast
+          snmp-server enable traps isis
+          snmp-server enable traps msdp
+          snmp-server enable traps mvpn
+          snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+          snmp-server enable traps rsvp
+          snmp-server enable traps ipsla
+          snmp-server enable traps slb real virtual csrp
+          snmp-server enable traps syslog
+          snmp-server enable traps event-manager
+          snmp-server enable traps pki
+          snmp-server enable traps ospfv3 state-change
+          snmp-server enable traps ospfv3 errors
+          snmp-server enable traps ethernet cfm alarm
+          snmp-server enable traps mpls vpn
+          snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+          snmp-server host 192.168.109.1 version 2c private
+          snmp-server host 192.168.109.1 version 2c public
           !
           control-plane
           !
@@ -1984,6 +2348,15 @@ lab:
     route add 172.16.30.0 mask 255.255.255.0 192.168.x.x <br>
     route add 172.16.20.0 mask 255.255.255.0 192.168.x.x <br>
     route add 172.16.120.0 mask 255.255.255.0 192.168.x.x <br>
+
+    route add 172.16.1.0 mask 255.255.255.0 192.168.109.130<br>
+    route add 172.16.2.0 mask 255.255.255.0 192.168.109.130<br>
+    route add 172.16.3.0 mask 255.255.255.0 192.168.109.130<br>
+    route add 172.16.12.0 mask 255.255.255.0 192.168.109.130<br>
+    route add 172.16.10.0 mask 255.255.255.0 192.168.109.131<br>
+    route add 172.16.20.0 mask 255.255.255.0 192.168.109.131<br>
+    route add 172.16.30.0 mask 255.255.255.0 192.168.109.131<br>
+    route add 172.16.120.0 mask 255.255.255.0 192.168.109.131<br>
 
     Add these static routes any time you start the lab. They are not persisted. To persist them use -p parameter
 
