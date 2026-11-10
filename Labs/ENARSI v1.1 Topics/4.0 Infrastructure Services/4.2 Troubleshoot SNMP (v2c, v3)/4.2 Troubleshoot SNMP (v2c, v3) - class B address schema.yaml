@@ -550,9 +550,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 8309 bytes
+          Current configuration : 8310 bytes
           !
-          ! Last configuration change at 13:44:05 UTC Mon Nov 9 2026
+          ! Last configuration change at 09:44:01 UTC Tue Nov 10 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -949,9 +949,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 7508 bytes
+          Current configuration : 7477 bytes
           !
-          ! Last configuration change at 13:44:27 UTC Mon Nov 9 2026
+          ! Last configuration change at 09:44:23 UTC Tue Nov 10 2026
           !
           version 15.9
           service timestamps debug datetime msec show-timezone
@@ -1121,7 +1121,6 @@ nodes:
           snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
           snmp-server enable traps ethernet evc status create delete
           snmp-server enable traps diameter
-          snmp-server enable traps vrrpv3
           snmp-server enable traps auth-framework sec-violation auth-fail
           snmp-server enable traps trustsec-sxp conn-srcaddr-err msg-parse-err conn-config-err binding-err conn-up conn-down binding-expn-fail oper-nodeid-change binding-conflict
           snmp-server enable traps aaa_server
@@ -1282,9 +1281,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 5460 bytes
+          Current configuration : 5461 bytes
           !
-          ! Last configuration change at 13:44:43 UTC Mon Nov 9 2026
+          ! Last configuration change at 09:44:40 UTC Tue Nov 10 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
@@ -1561,9 +1560,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 4759 bytes
+          Current configuration : 4760 bytes
           !
-          ! Last configuration change at 13:45:02 UTC Mon Nov 9 2026
+          ! Last configuration change at 09:44:56 UTC Tue Nov 10 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
@@ -1794,9 +1793,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 5316 bytes
+          Current configuration : 5317 bytes
           !
-          ! Last configuration change at 13:45:16 UTC Mon Nov 9 2026
+          ! Last configuration change at 09:45:10 UTC Tue Nov 10 2026
           !
           version 15.2
           service timestamps debug datetime msec show-timezone
