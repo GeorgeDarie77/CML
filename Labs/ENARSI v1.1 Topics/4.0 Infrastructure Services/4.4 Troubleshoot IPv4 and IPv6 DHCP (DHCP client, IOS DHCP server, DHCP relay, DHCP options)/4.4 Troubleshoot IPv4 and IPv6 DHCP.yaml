@@ -1,4 +1,49 @@
-annotations: []
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:60:a6:e4
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1402.0753853723652
+    y1: -380.51421062008575
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: 172.16.99.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1136.1307436815666
+    y1: -270.14487245137667
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -969.1027665658398
+    y1: -227.52208358411275
+    z_index: 1
 smart_annotations: []
 nodes:
   - boot_disk_size: null
@@ -52,7 +97,7 @@ nodes:
     interfaces:
       - id: i0
         label: eth0
-        mac_address: null
+        mac_address: 52:54:00:b1:3a:e1
         type: physical
         slot: 0
       - id: i1
@@ -93,7 +138,7 @@ nodes:
     interfaces:
       - id: i0
         label: eth0
-        mac_address: null
+        mac_address: 52:54:00:05:6b:22
         type: physical
         slot: 0
       - id: i1
@@ -112,40 +157,14 @@ nodes:
         type: physical
         slot: 3
   - boot_disk_size: null
-    configuration: []
-    cpu_limit: null
-    cpus: null
-    data_volume: null
-    hide_links: false
-    id: n3
-    image_definition: null
-    label: DHCPServ1
-    node_definition: server
-    parameters: {}
-    priority: null
-    pyats:
-      username: null
-      password: null
-      enable_password: null
-    ram: null
-    tags: []
-    x: -1337
-    y: -343
-    interfaces:
-      - id: i0
-        label: eth0
-        mac_address: null
-        type: physical
-        slot: 0
-  - boot_disk_size: null
     configuration:
       - name: ios_config.txt
         content: |-
           Building configuration...
 
-          Current configuration : 2980 bytes
+          Current configuration : 1525 bytes
           !
-          ! Last configuration change at 11:22:01 UTC Tue Nov 10 2026
+          ! Last configuration change at 16:29:29 UTC Tue Nov 10 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -176,6 +195,15 @@ nodes:
           !
           !
           !
+          ip dhcp excluded-address 172.16.99.1 172.16.99.127
+          !
+          ip dhcp pool TOOLS_POOL
+           network 172.16.99.0 255.255.255.0
+           default-router 172.16.99.1
+           dns-server 8.8.8.8
+          !
+          ip dhcp pool STATIC_FROM_FLASH
+           origin file flash0:static-bindings.txt
           !
           !
           !
@@ -205,15 +233,14 @@ nodes:
           !
           !
           interface GigabitEthernet0/0
-           no ip address
-           shutdown
+           description Connection to internet
+           ip address dhcp
            duplex auto
            speed auto
            media-type rj45
           !
           interface GigabitEthernet0/1
-           no ip address
-           shutdown
+           ip address 172.16.99.1 255.255.255.0
            duplex auto
            speed auto
            media-type rj45
@@ -238,42 +265,22 @@ nodes:
           no ip http server
           no ip http secure-server
           !
+          logging trap debugging
           ipv6 ioam timestamp
           !
           !
           !
           control-plane
           !
-          banner exec ^C
-          **************************************************************************
-          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
-          * education. IOSv is provided as-is and is not supported by Cisco's      *
-          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
-          * of the IOSv Software or Documentation to any third party for any       *
-          * purposes is expressly prohibited except as otherwise authorized by     *
-          * Cisco in writing.                                                      *
-          **************************************************************************^C
-          banner incoming ^C
-          **************************************************************************
-          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
-          * education. IOSv is provided as-is and is not supported by Cisco's      *
-          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
-          * of the IOSv Software or Documentation to any third party for any       *
-          * purposes is expressly prohibited except as otherwise authorized by     *
-          * Cisco in writing.                                                      *
-          **************************************************************************^C
-          banner login ^C
-          **************************************************************************
-          * IOSv is strictly limited to use for evaluation, demonstration and IOS  *
-          * education. IOSv is provided as-is and is not supported by Cisco's      *
-          * Technical Advisory Center. Any use or disclosure, in whole or in part, *
-          * of the IOSv Software or Documentation to any third party for any       *
-          * purposes is expressly prohibited except as otherwise authorized by     *
-          * Cisco in writing.                                                      *
-          **************************************************************************^C
+          banner exec ^C^C
+          banner incoming ^C^C
+          banner login ^C^C
+          banner motd ^C^C
           !
           line con 0
            exec-timeout 0 0
+           logging synchronous
+           length 0
           line aux 0
           line vty 0 4
            exec-timeout 0 0
@@ -287,7 +294,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n4
+    id: n3
     image_definition: null
     label: CE
     node_definition: iosv
@@ -332,12 +339,9 @@ nodes:
         content: |-
           Building configuration...
 
-          *Nov 10 11:22:12.292: %SYS-5-CONFIG_P: Configured programmatically by process PnP Agent Discovery from console as vty0
-          *Nov 10 11:22:12.293: %SYS-5-CONFIG_P: Configured programmatically by process PnP Agent Discovery from console as vty0
-          *Nov 10 11:22:12.400: %SYS-5-CONFIG_P: Configured programmatically by process PnP Agent Discovery from console as vty0
           Current configuration : 1038 bytes
           !
-          ! Last configuration change at 11:22:13 UTC Tue Nov 10 2026
+          ! Last configuration change at 13:45:58 UTC Wed Nov 11 2026
           !
           version 17.16
           service timestamps debug datetime msec
@@ -440,7 +444,7 @@ nodes:
     cpus: null
     data_volume: null
     hide_links: false
-    id: n5
+    id: n4
     image_definition: null
     label: SW1
     node_definition: ioll2-xe
@@ -484,42 +488,78 @@ nodes:
         mac_address: null
         type: physical
         slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: network-config
+        content: |-
+          #network-config
+          network:
+            version: 2
+            ethernets:
+              ens2:
+                dhcp4: true
+                optional: true
+                dhcp-identifier: mac
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: DHCPServ1
+    node_definition: ubuntu
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -1344
+    y: -338
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: 52:54:00:d0:6d:25
+        type: physical
+        slot: 0
 links:
   - id: l0
-    n1: n4
+    n1: n3
     n2: n0
     i1: i1
     i2: i0
     conditioning: {}
     label: iosv-0-GigabitEthernet0/0<->ext-conn-0-port
   - id: l1
-    n1: n3
-    n2: n5
-    i1: i0
-    i2: i1
-    conditioning: {}
-    label: server-0-eth0<->iol-l2-0-Ethernet0/0
-  - id: l2
     n1: n2
-    n2: n5
+    n2: n4
     i1: i0
     i2: i2
     conditioning: {}
     label: syslog-0-eth0<->iol-l2-0-Ethernet0/1
-  - id: l3
+  - id: l2
     n1: n1
-    n2: n5
+    n2: n4
     i1: i0
     i2: i3
     conditioning: {}
     label: net-tools-0-eth0<->iol-l2-0-Ethernet0/2
-  - id: l4
-    n1: n5
-    n2: n4
+  - id: l3
+    n1: n4
+    n2: n3
     i1: i5
     i2: i2
     conditioning: {}
     label: iol-l2-0-Ethernet1/0<->iosv-0-GigabitEthernet0/1
+  - id: l4
+    n1: n5
+    n2: n4
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: ubuntu-0-ens2<->SW1-Ethernet0/0
 lab:
   description: ''
   notes: ''
