@@ -1,3 +1,57 @@
+Connecatare containere la internet
+
+In nteriorul laboratorul se folosesc adrese clasa Backup
+Punctul de iesire este external conector.
+Ruterul se conecteaza la external conector prin g0/0
+Conectorul extern este in modul Bridge ceea ce inseamna ca ruterul va primi o adresa data de ruterul in casa. Ruterul CE cu interfata G0/0 face parte din reteaua locala a casei
+
+pentru ca un container linux din cml sa accesseze internetuö trebuie ca adresa sa fie translatata cu NAT
+inside 172.16.99.0 /24 - pe g0/1
+outside - pe g0/0
+
+CE(config)#access-list 10 permit 172.16.99.0 0.0.0.255
+CE(config)#ip nat inside source list 10 interface GigabitEthernet0/0 overload
+
+int g0/0
+ip nat outside
+int g0/1
+ip nat inside
+
+CE# tclsh
+CE(tcl)# puts [open "flash0:static-bindings.txt" w+] {
+*version* 2
+*time* Infinite
+!IP address       Type    Hardware address     Lease expiration
+172.16.99.2 /24       id      0152.5400.d06d.25    Infinite
+172.16.99.3 /24       hw      0152.5400.056b.22    Infinite
+172.16.99.4 /24       id      0152.5400.b13a.e1    Infinite
+*end*
+}
+CE(tcl)# tclquit
+DHCPServ1
+52:54:00:d0:6d:25 
+Syslog
+52:54:00:05:6b:22	5254.0005.6b22
+NetTools
+52:54:00:b1:3a:e1	5254.00b1:3ae1
+
+
+ip dhcp pool STATIC_FROM_FLASH
+ origin file flash0:static-bindings.txt
+
+
+Alocar statica cu pool separat pentru fiecare MAC
+
+ip dhcp pool DHCPServ1_POOL
+host 172.16.99.2 255.255.255.0
+client-identifier 0152.5400.d06d.25
+default-router 172.16.99.1
+dns-server 8.8.8.8 1.1.1.1Eu
+lease infinite
+
+pentru DHCPServ1
+sudo networkctl renew ens2
+
 Nu, pe Cisco IOS nu poți defini mai multe comenzi host în interiorul aceluiași ip dhcp pool. 
 Dacă introduci o a doua comandă host sau un al doilea client-identifier în același pool, comanda nouă o va suprascrie pur și simplu pe cea anterioară.
 Din cauza modului în care este concepută arhitectura serverului DHCP din Cisco IOS, fiecare rezervare statică necesită propriul său ip dhcp pool separat.

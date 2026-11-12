@@ -4,15 +4,15 @@ annotations:
     color: '#000000'
     rotation: 0
     text_bold: true
-    text_content: 52:54:00:60:a6:e4
+    text_content: 52:54:00:d0:6d:25
     text_font: monospace
     text_italic: false
     text_size: 12
     text_unit: pt
     thickness: 1
     type: text
-    x1: -1402.0753853723652
-    y1: -380.51421062008575
+    x1: -1530.0887514349847
+    y1: -344.51045141497394
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -44,6 +44,36 @@ annotations:
     x1: -969.1027665658398
     y1: -227.52208358411275
     z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:05:6b:22
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1540.0939725531955
+    y1: -208.50042686800938
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:b1:3a:e1
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1531.0972096464861
+    y1: -93.4925951906933
+    z_index: 0
 smart_annotations: []
 nodes:
   - boot_disk_size: null
@@ -162,9 +192,9 @@ nodes:
         content: |-
           Building configuration...
 
-          Current configuration : 1525 bytes
+          Current configuration : 2137 bytes
           !
-          ! Last configuration change at 16:29:29 UTC Tue Nov 10 2026
+          ! Last configuration change at 17:13:04 UTC Thu Nov 12 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -202,8 +232,26 @@ nodes:
            default-router 172.16.99.1
            dns-server 8.8.8.8
           !
-          ip dhcp pool STATIC_FROM_FLASH
-           origin file flash0:static-bindings.txt
+          ip dhcp pool DHCPServ1_POOL
+           host 172.16.99.2 255.255.255.0
+           client-identifier 0152.5400.d06d.25
+           default-router 172.16.99.1
+           dns-server 8.8.8.8
+           lease infinite
+          !
+          ip dhcp pool SYSLOG_STATIC
+           host 172.16.99.3 255.255.255.0
+           hardware-address 5254.0005.6b22
+           dns-server 8.8.8.8
+           default-router 172.16.99.1
+           lease infinite
+          !
+          ip dhcp pool NETTOOLS_STATIC
+           host 172.16.99.4 255.255.255.0
+           hardware-address 5254.00b1.3ae1
+           dns-server 8.8.8.8
+           default-router 172.16.99.1
+           lease infinite
           !
           !
           !
@@ -235,12 +283,16 @@ nodes:
           interface GigabitEthernet0/0
            description Connection to internet
            ip address dhcp
+           ip nat outside
+           ip virtual-reassembly in
            duplex auto
            speed auto
            media-type rj45
           !
           interface GigabitEthernet0/1
            ip address 172.16.99.1 255.255.255.0
+           ip nat inside
+           ip virtual-reassembly in
            duplex auto
            speed auto
            media-type rj45
@@ -264,18 +316,20 @@ nodes:
           !
           no ip http server
           no ip http secure-server
+          ip nat inside source list 10 interface GigabitEthernet0/0 overload
           !
           logging trap debugging
           ipv6 ioam timestamp
           !
           !
+          access-list 10 permit 172.16.99.0 0.0.0.255
           !
           control-plane
           !
-          banner exec ^C^C
-          banner incoming ^C^C
-          banner login ^C^C
-          banner motd ^C^C
+          banner exec ^CC^C
+          banner incoming ^CC^C
+          banner login ^CC^C
+          banner motd ^CC^C
           !
           line con 0
            exec-timeout 0 0
@@ -531,35 +585,35 @@ links:
     i1: i1
     i2: i0
     conditioning: {}
-    label: iosv-0-GigabitEthernet0/0<->ext-conn-0-port
+    label: CE-GigabitEthernet0/0<->ext-conn-0-port
   - id: l1
     n1: n2
     n2: n4
     i1: i0
     i2: i2
     conditioning: {}
-    label: syslog-0-eth0<->iol-l2-0-Ethernet0/1
+    label: SysLog-eth0<->SW1-Ethernet0/1
   - id: l2
     n1: n1
     n2: n4
     i1: i0
     i2: i3
     conditioning: {}
-    label: net-tools-0-eth0<->iol-l2-0-Ethernet0/2
+    label: NetTools-eth0<->SW1-Ethernet0/2
   - id: l3
     n1: n4
     n2: n3
     i1: i5
     i2: i2
     conditioning: {}
-    label: iol-l2-0-Ethernet1/0<->iosv-0-GigabitEthernet0/1
+    label: SW1-Ethernet1/0<->CE-GigabitEthernet0/1
   - id: l4
     n1: n5
     n2: n4
     i1: i0
     i2: i1
     conditioning: {}
-    label: ubuntu-0-ens2<->SW1-Ethernet0/0
+    label: DHCPServ1-ens2<->SW1-Ethernet0/0
 lab:
   description: ''
   notes: ''
