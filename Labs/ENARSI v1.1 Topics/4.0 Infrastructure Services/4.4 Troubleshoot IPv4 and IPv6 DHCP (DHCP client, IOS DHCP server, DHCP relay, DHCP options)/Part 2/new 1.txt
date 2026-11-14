@@ -1,0 +1,75 @@
+
+1. Configurația Inițială în CML
+
+1. Conectează nodul Linux la switch-ul sau routerul din topologie prin una dintre interfețe (de exemplu, eth1).
+2. Deschide consola nodului Linux din CML.
+3. Configurează o adresă IP statică pe interfața respectivă (un server DHCP nu poate avea IP dinamic).
+bash
+# Setează IP-ul static (ex: 192.168.1.5 cu masca /24)
+sudo ip addr add 172.16.1.254/24 dev ens2
+sudo ip link set dev ens2 up
+sudo ip route add default via 172.16.1.1
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
+
+Use code with caution.
+
+2. Instalarea Serviciului DHCP
+
+Dacă nodul are acces la internet (prin nodul External Connector din CML), rulează:
+bash
+sudo apt update
+sudo apt install isc-dhcp-server -y
+Use code with caution.
+(Dacă folosești o imagine de Alpine Linux, comanda este apk add dhcp).
+
+3. Configurarea Interfeței de Ascultare
+
+Trebuie să îi spui serverului pe ce interfață să împartă IP-uri.
+1. Deschide fișierul de configurare implicit:bash
+sudo nano /etc/default/isc-dhcp-server
+Use code with caution.
+2. Modifică linia INTERFACESv4 adăugând numele interfeței tale:text
+INTERFACESv4="eth1"
+Use code with caution.
+3. Salvează și închide fișierul (Ctrl+O, Enter, Ctrl+X).
+
+4. Definirea bazei de date DHCP (Pool-ul de IP-uri)
+
+1. Deschide fișierul principal de configurare:bash
+sudo nano /etc/dhcp/dhcpd.conf
+Use code with caution.
+2. Șterge sau comentează liniile existente și adaugă configurația pentru rețeaua ta:text
+# Configurație globală DNS (opțional)
+option domain-name-servers 8.8.8.8, 1.1.1.1;
+default-lease-time 600;
+max-lease-time 7200;
+
+# Definirea subnetului și a pool-ului
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.1.50 192.168.1.150;     # Plaja de IP-uri oferite clienților
+  option routers 192.168.1.1;           # Default Gateway-ul transmis clienților
+  option subnet-mask 255.255.255.0;
+}
+Use code with caution.
+3. Salvează și închide fișierul.
+
+5. Pornirea și Verificarea Serviciului
+
+Pornește serviciul DHCP și setează-l să ruleze automat:
+bash
+sudo systemctl restart isc-dhcp-server
+sudo systemctl enable isc-dhcp-server
+Use code with caution.
+Pentru a verifica dacă serverul rulează corect și nu are erori de sintaxă:
+bash
+sudo systemctl status isc-dhcp-server
+Use code with caution.
+
+💡 Alternativă ultra-rapidă (folosind Dnsmasq)
+
+Dacă vrei o variantă mai ușoară și mai rapidă (fără configurări complexe):
+1. Instalează dnsmasq: sudo apt install dnsmasq -y
+2. Deschide /etc/dnsmasq.conf și adaugă la final o singură linie:text
+dhcp-range=192.168.1.50,192.168.1.150,255.255.255.0,12h
+Use code with caution.
+3. Repornește serviciul: sudo systemctl restart dnsmasq
