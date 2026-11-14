@@ -1,0 +1,1091 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:d0:6d:25
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1530.0887514349847
+    y1: -344.51045141497394
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FE0000'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.99.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1136.1307436815666
+    y1: -270.14487245137667
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FE0000'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -969.1027665658398
+    y1: -227.52208358411275
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:05:6b:22
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1533.8698851993256
+    y1: -208.50042686800938
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:b1:3a:e1
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1536.5975662769874
+    y1: -94.06630269220751
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:be:a0:d0
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -397.22218672794367
+    y1: -366.2720676196823
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:b2:66:9e
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -387.57959130313924
+    y1: -210.07648459048536
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:db:24:d6
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -394.68590874740835
+    y1: -57.02132272423972
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0040FE'
+    rotation: 0
+    text_bold: true
+    text_content: 172.16.199.0/24
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -869.5380026868003
+    y1: -263.6994531615559
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0040FE'
+    rotation: 0
+    text_bold: true
+    text_content: '.1'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -895.9692643710517
+    y1: -230.97034756974307
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FE0000'
+    rotation: 0
+    text_bold: true
+    text_content: '.2'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1298.4135826823483
+    y1: -334.9170095748584
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FE0000'
+    rotation: 0
+    text_bold: true
+    text_content: '.3'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1301.9821941594398
+    y1: -229.56409235922135
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FE0000'
+    rotation: 0
+    text_bold: true
+    text_content: '.4'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1299.3267182826612
+    y1: -106.57626097428535
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0040FE'
+    rotation: 0
+    text_bold: true
+    text_content: '.2'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -519.370982885602
+    y1: -364.77876651594704
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0040FE'
+    rotation: 0
+    text_bold: true
+    text_content: '.3'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -518.7902027934465
+    y1: -231.41745620789405
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#0040FE'
+    rotation: 0
+    text_bold: true
+    text_content: '.4'
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -510.9479874551092
+    y1: -67.97305702280173
+    z_index: 1
+smart_annotations:
+  - tag: file_pool
+    is_on: true
+    padding: 35
+    label: ''
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#F16A2080'
+    border_color: '#00000080'
+    z_index: -3
+  - tag: manual_pool
+    is_on: true
+    padding: 35
+    label: ''
+    tag_offset_x: 0
+    tag_offset_y: 0
+    tag_size: 14
+    group_distance: 400
+    thickness: 1
+    border_style: ''
+    fill_color: '#A7A8AA80'
+    border_color: '#00000080'
+    z_index: 1
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: default
+        content: System Bridge
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: Internet
+    node_definition: external_connector
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -920
+    y: -400
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: NetTools
+    node_definition: net-tools
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - manual_pool
+    x: -1345
+    y: -88
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: 52:54:00:b1:3a:e1
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: SysLog
+    node_definition: syslog
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - manual_pool
+    x: -1344
+    y: -206
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: 52:54:00:05:6b:22
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2681 bytes
+          !
+          ! Last configuration change at 12:31:01 UTC Sat Nov 14 2026
+          !
+          version 15.9
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          !
+          hostname CE
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          !
+          !
+          !
+          mmi polling-interval 60
+          no mmi auto-configure
+          no mmi pvc
+          mmi snmp-timeout 180
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip dhcp excluded-address 172.16.99.1 172.16.99.127
+          ip dhcp excluded-address 172.16.199.1 172.16.199.127
+          !
+          ip dhcp pool TOOLS_POOL
+           network 172.16.99.0 255.255.255.0
+           default-router 172.16.99.1
+           dns-server 8.8.8.8
+          !
+          ip dhcp pool DHCPServ1_POOL
+           host 172.16.99.2 255.255.255.0
+           client-identifier 0152.5400.d06d.25
+           default-router 172.16.99.1
+           dns-server 8.8.8.8
+           lease infinite
+          !
+          ip dhcp pool SYSLOG_STATIC
+           host 172.16.99.3 255.255.255.0
+           hardware-address 5254.0005.6b22
+           dns-server 8.8.8.8
+           default-router 172.16.99.1
+           lease infinite
+          !
+          ip dhcp pool NETTOOLS_STATIC
+           host 172.16.99.4 255.255.255.0
+           hardware-address 5254.00b1.3ae1
+           dns-server 8.8.8.8
+           default-router 172.16.99.1
+           lease infinite
+          !
+          ip dhcp pool TOOLS_POOL_2
+           network 172.16.199.0 255.255.255.0
+           default-router 172.16.199.1
+           dns-server 8.8.8.8
+          !
+          ip dhcp pool STATIC_FROM_FLASH
+           origin file flash0:static-bindings.txt
+           dns-server 8.8.8.8
+           default-router 172.16.199.1
+           lease infinite
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          multilink bundle-name authenticated
+          !
+          !
+          !
+          !
+          !
+          redundancy
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           description Connection to internet
+           ip address dhcp
+           ip nat outside
+           ip virtual-reassembly in
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/1
+           ip address 172.16.99.1 255.255.255.0
+           ip nat inside
+           ip virtual-reassembly in
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/2
+           ip address 172.16.199.1 255.255.255.0
+           ip nat inside
+           ip virtual-reassembly in
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          interface GigabitEthernet0/3
+           no ip address
+           shutdown
+           duplex auto
+           speed auto
+           media-type rj45
+          !
+          ip forward-protocol nd
+          !
+          !
+          no ip http server
+          no ip http secure-server
+          ip nat inside source list NAT interface GigabitEthernet0/0 overload
+          !
+          ip access-list extended NAT
+           deny   ip 172.16.99.0 0.0.0.255 192.168.109.0 0.0.0.255
+           deny   ip 172.16.199.0 0.0.0.255 192.168.109.0 0.0.0.255
+           permit ip 172.16.99.0 0.0.0.255 any
+           permit ip 172.16.199.0 0.0.0.255 any
+          !
+          logging trap debugging
+          ipv6 ioam timestamp
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^CCC^C
+          banner incoming ^CCC^C
+          banner login ^CCC^C
+          banner motd ^CCC^C
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+           length 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input none
+          !
+          no scheduler allocate
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: CE
+    node_definition: iosv
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -922
+    y: -206
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 3229 bytes\n\
+          !\n! Last configuration change at 12:35:47 UTC Sat Nov 14 2026\n!\nversion\
+          \ 17.16\nservice timestamps debug datetime msec\nservice timestamps log\
+          \ datetime msec\n!\nhostname inserthostname-here\n!\nboot-start-marker\n\
+          boot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\n!\n!\n!\nip audit notify log\nip audit po max-events 100\n\
+          ip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto\
+          \ pki trustpoint TP-self-signed-2039810\n enrollment selfsigned\n subject-name\
+          \ cn=IOS-Self-Signed-Certificate-2039810\n revocation-check none\n rsakeypair\
+          \ TP-self-signed-2039810\n hash sha512\n!\n!\ncrypto pki certificate chain\
+          \ TP-self-signed-2039810\n certificate self-signed 01\n  3082032A 30820212\
+          \ A0030201 02020101 300D0609 2A864886 F70D0101 0D050030\n  2E312C30 2A060355\
+          \ 04030C23 494F532D 53656C66 2D536967 6E65642D 43657274\n  69666963 6174652D\
+          \ 32303339 38313030 1E170D32 36313131 33313434 3233385A\n  170D3336 31313132\
+          \ 31343432 33385A30 2E312C30 2A060355 04030C23 494F532D\n  53656C66 2D536967\
+          \ 6E65642D 43657274 69666963 6174652D 32303339 38313030\n  82012230 0D06092A\
+          \ 864886F7 0D010101 05000382 010F0030 82010A02 82010100\n  A7FB0F28 03867964\
+          \ A50F652E 194129E6 0409BD2A 1D0480FF 05D1FFBE 59F8C2D7\n  3B3E250A 5DD5E2DA\
+          \ DBC32871 E4A135B5 6E13E3E3 99575B08 22D69E06 1B7373A8\n  69772738 428A4B37\
+          \ 89E771BA AA240585 4DF66AC8 BAA2210C E2072EB6 ACEC084D\n  22E20502 6568AE6E\
+          \ 3DA5ECCB 9135C452 346B2E35 9FEFFF02 3A2253A4 87CE4326\n  AE5D51C5 4B4DA7E0\
+          \ 6A908E04 16C1FBF7 98B4CF36 338A1120 01E682F7 CAB22C8F\n  EA6EC25E 3AD4A65F\
+          \ 6AEAFC53 072C252C 988CDCC4 F64688EC 49ACE9F2 B6336508\n  ADA480B0 08D63BA4\
+          \ 9A63948E 1C3C82B3 D7195556 A09E263B 9F329483 0F39803A\n  1D03E8F9 07080CC6\
+          \ C64F90E7 C041AFE5 AA4B6C0C C652E1B7 8CA6BF64 EDCBE01B\n  02030100 01A35330\
+          \ 51301D06 03551D0E 04160414 F1F07BEB 7603C86A E1BCF7FA\n  53C964E5 4C0DCB2A\
+          \ 301F0603 551D2304 18301680 14F1F07B EB7603C8 6AE1BCF7\n  FA53C964 E54C0DCB\
+          \ 2A300F06 03551D13 0101FF04 05300301 01FF300D 06092A86\n  4886F70D 01010D05\
+          \ 00038201 01005046 783100AA B9C60444 EBA3A344 2E30DBF9\n  447EC742 667B261F\
+          \ D14B97AE C4180700 9E6477D4 58A9ADAB 6C050114 384EE416\n  5801C7FE 6529BE37\
+          \ FD087B91 A1BE9AA1 DDB50811 F577BE76 2B67C017 827B715F\n  159E1CA4 DA58FAD5\
+          \ EBE5AF52 00DD6B3F 20CB270A A32F16A5 53D2B1A8 F4793E5B\n  FD367958 9720C0D1\
+          \ BA932365 8C70EDD1 864613EB D9C4C9ED 98D1C7DA 1E229B3C\n  B160448B B7BF2E79\
+          \ E7A6AD61 C62189F1 2448E61E D604A45E B02772E6 1A4EFCAB\n  0CB46DD3 8887A417\
+          \ 27AFFC88 5A4D53AF 8285D533 1C24035D BBC918C4 F17BA302\n  09FFFC4D 84846B28\
+          \ CF398662 A01F7CE5 7E195E8F 2255DC04 EE9C8165 0E4AF215\n  21A52AE0 337D83A0\
+          \ C061F7E5 4D96\n  \tquit\n!\n!\nmemory free low-watermark processor 79497\n\
+          !\n!\nspanning-tree mode rapid-pvst\nspanning-tree extend system-id\n!\n\
+          !\nvlan internal allocation policy ascending\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n\
+          !\ninterface Ethernet0/1\n!\ninterface Ethernet0/2\n!\ninterface Ethernet0/3\n\
+          !\ninterface Ethernet1/0\n!\ninterface Ethernet1/1\n!\ninterface Ethernet1/2\n\
+          !\ninterface Ethernet1/3\n!\nip forward-protocol nd\nip forward-protocol\
+          \ udp\n!\n!\nip http server\nip http secure-server\nip ssh bulk-mode 131072\n\
+          !\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout\
+          \ 0 0\n logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n\
+          \ login\n transport input ssh\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: SW1
+    node_definition: ioll2-xe
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -1173
+    y: -207
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+      - id: i5
+        label: Ethernet1/0
+        mac_address: null
+        type: physical
+        slot: 4
+  - boot_disk_size: null
+    configuration:
+      - name: network-config
+        content: |-
+          #network-config
+          network:
+            version: 2
+            ethernets:
+              ens2:
+                dhcp4: true
+                optional: true
+                dhcp-identifier: mac
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: DHCPServ1
+    node_definition: ubuntu
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - manual_pool
+    x: -1344
+    y: -338
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: 52:54:00:d0:6d:25
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2867 bytes
+          !
+          ! Last configuration change at 12:31:04 UTC Sat Nov 14 2026
+          !
+          version 15.2
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          no service password-encryption
+          service compress-config
+          !
+          hostname inserthostname-here
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          !
+          no aaa new-model
+          no process cpu extended history
+          no process cpu autoprofile hog
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          no ipv6 cef
+          !
+          !
+          !
+          spanning-tree mode pvst
+          spanning-tree extend system-id
+          !
+          no cdp run
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface GigabitEthernet0/0
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/1
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/2
+           negotiation auto
+           no cdp enable
+          !
+          interface GigabitEthernet0/3
+           negotiation auto
+           no cdp enable
+          !
+          ip forward-protocol nd
+          !
+          ip http server
+          ip http secure-server
+          !
+          ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+          !
+          !
+          no service-routing capabilities-manager
+          !
+          !
+          !
+          !
+          control-plane
+          !
+          banner exec ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner incoming ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          banner login ^C
+          IOSv - Cisco Systems Confidential -
+
+          Supplemental End User License Restrictions
+
+          This IOSv software is provided AS-IS without warranty of any kind. Under no circumstances may this software be used separate from the Cisco Modeling Labs Software that this software was provided with, or deployed or used as part of a production environment.
+
+          By using the software, you agree to abide by the terms and conditions of the Cisco End User License Agreement at http://www.cisco.com/go/eula. Unauthorized use or distribution of this software is expressly prohibited.
+          ^C
+          !
+          line con 0
+           exec-timeout 0 0
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags: []
+    x: -680
+    y: -206
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: TACACSPlus
+    node_definition: tacplus
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - file_pool
+    x: -454
+    y: -199
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: 52:54:00:b2:66:9e
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: RADIUS
+    node_definition: radius
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - file_pool
+    x: -454
+    y: -61
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: 52:54:00:db:24:d6
+        type: physical
+        slot: 0
+      - id: i1
+        label: eth1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i2
+        label: eth2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i3
+        label: eth3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: null
+    label: DHCPServ2
+    node_definition: ubuntu
+    parameters: {}
+    priority: null
+    pyats:
+      username: null
+      password: null
+      enable_password: null
+    ram: null
+    tags:
+      - file_pool
+    x: -459
+    y: -361
+    interfaces:
+      - id: i0
+        label: ens2
+        mac_address: 52:54:00:be:a0:d0
+        type: physical
+        slot: 0
+links:
+  - id: l0
+    n1: n3
+    n2: n0
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: CE-GigabitEthernet0/0<->ext-conn-0-port
+  - id: l1
+    n1: n2
+    n2: n4
+    i1: i0
+    i2: i2
+    conditioning: {}
+    label: SysLog-eth0<->SW1-Ethernet0/1
+  - id: l2
+    n1: n1
+    n2: n4
+    i1: i0
+    i2: i3
+    conditioning: {}
+    label: NetTools-eth0<->SW1-Ethernet0/2
+  - id: l3
+    n1: n4
+    n2: n3
+    i1: i5
+    i2: i2
+    conditioning: {}
+    label: SW1-Ethernet1/0<->CE-GigabitEthernet0/1
+  - id: l4
+    n1: n5
+    n2: n4
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: DHCPServ1-ens2<->SW1-Ethernet0/0
+  - id: l5
+    n1: n3
+    n2: n6
+    i1: i3
+    i2: i1
+    conditioning: {}
+    label: CE-GigabitEthernet0/2<->iosvl2-0-GigabitEthernet0/0
+  - id: l6
+    n1: n6
+    n2: n9
+    i1: i2
+    i2: i0
+    conditioning: {}
+    label: iosvl2-0-GigabitEthernet0/1<->ubuntu-0-ens2
+  - id: l7
+    n1: n6
+    n2: n7
+    i1: i3
+    i2: i0
+    conditioning: {}
+    label: iosvl2-0-GigabitEthernet0/2<->tacplus-0-eth0
+  - id: l8
+    n1: n6
+    n2: n8
+    i1: i4
+    i2: i0
+    conditioning: {}
+    label: iosvl2-0-GigabitEthernet0/3<->radius-0-eth0
+lab:
+  description: |-
+    DHCP Static IP allocation
+    1. Using pool for each allocation
+    2. Using file on router for complete allocation
+  notes: ''
+  title: 4.4 Troubleshoot IPv4 and IPv6 DHCP - Part 1
+  node_staging:
+    enabled: false
+    start_remaining: true
+    abort_on_failure: false
+  version: 0.3.1
