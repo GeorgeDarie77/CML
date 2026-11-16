@@ -41,8 +41,8 @@ annotations:
     text_unit: pt
     thickness: 1
     type: text
-    x1: -1533.8698851993256
-    y1: -208.50042686800938
+    x1: -1541.335537862891
+    y1: -210.6334704861709
     z_index: 0
   - border_color: '#00000000'
     border_style: ''
@@ -116,7 +116,7 @@ annotations:
     text_unit: pt
     thickness: 1
     type: text
-    x1: -1554.4028537443955
+    x1: -1541.6045920354268
     y1: -333.8019948180085
     z_index: 0
   - border_color: '#00000000'
@@ -194,6 +194,36 @@ annotations:
     x1: -583.7610562942499
     y1: -125.13175004054014
     z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#044BFF'
+    rotation: 0
+    text_bold: true
+    text_content: Get static IP from CE Router
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1492.798261708969
+    y1: -401.0665218090807
+    z_index: 1
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#000000'
+    rotation: 0
+    text_bold: true
+    text_content: 52:54:00:c0:e9:15
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -1496.5975662769874
+    y1: -54.066302692207515
+    z_index: 0
 smart_annotations:
   - tag: manual_pool
     is_on: true
@@ -329,7 +359,7 @@ nodes:
 
           Current configuration : 2312 bytes
           !
-          ! Last configuration change at 05:58:29 UTC Mon Nov 16 2026
+          ! Last configuration change at 06:09:14 UTC Mon Nov 16 2026
           !
           version 15.9
           service timestamps debug datetime msec
@@ -531,7 +561,7 @@ nodes:
     configuration:
       - name: ios_config.txt
         content: "Building configuration...\n\nCurrent configuration : 3229 bytes\n\
-          !\n! Last configuration change at 13:03:31 UTC Mon Nov 16 2026\n!\nversion\
+          !\n! Last configuration change at 13:14:15 UTC Mon Nov 16 2026\n!\nversion\
           \ 17.16\nservice timestamps debug datetime msec\nservice timestamps log\
           \ datetime msec\n!\nhostname inserthostname-here\n!\nboot-start-marker\n\
           boot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n\
@@ -669,7 +699,7 @@ nodes:
 
           Current configuration : 2870 bytes
           !
-          ! Last configuration change at 05:58:59 UTC Mon Nov 16 2026
+          ! Last configuration change at 06:09:44 UTC Mon Nov 16 2026
           !
           version 15.2
           service timestamps debug datetime msec
